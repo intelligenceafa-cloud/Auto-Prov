@@ -1,0 +1,17 @@
+{
+  "dataset": "S2",
+  "timestamp": "2018-09-15 13:00:00_2018-09-15 14:00:00",
+  "attack_type": "Malvertising dominate",
+  "log_types_found": [
+    "firefox"
+  ],
+  "total_logs": {
+    "firefox": 626
+  },
+  "malicious_logs": {
+    "firefox": 0
+  },
+  "benign_logs": {
+    "firefox": 626
+  }
+}

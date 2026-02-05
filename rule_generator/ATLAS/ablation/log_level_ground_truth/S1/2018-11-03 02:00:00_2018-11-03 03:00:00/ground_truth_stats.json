@@ -1,0 +1,17 @@
+{
+  "dataset": "S1",
+  "timestamp": "2018-11-03 02:00:00_2018-11-03 03:00:00",
+  "attack_type": "Strategic web compromise",
+  "log_types_found": [
+    "firefox"
+  ],
+  "total_logs": {
+    "firefox": 1105
+  },
+  "malicious_logs": {
+    "firefox": 0
+  },
+  "benign_logs": {
+    "firefox": 1105
+  }
+}

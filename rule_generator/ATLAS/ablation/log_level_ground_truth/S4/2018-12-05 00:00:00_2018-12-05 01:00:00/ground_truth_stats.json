@@ -1,0 +1,17 @@
+{
+  "dataset": "S4",
+  "timestamp": "2018-12-05 00:00:00_2018-12-05 01:00:00",
+  "attack_type": "Pony campaign",
+  "log_types_found": [
+    "firefox"
+  ],
+  "total_logs": {
+    "firefox": 3477
+  },
+  "malicious_logs": {
+    "firefox": 6
+  },
+  "benign_logs": {
+    "firefox": 3471
+  }
+}

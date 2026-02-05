@@ -1,0 +1,21 @@
+{
+  "dataset": "S3",
+  "timestamp": "2018-12-01 14:00:00_2018-12-01 15:00:00",
+  "attack_type": "Spam campaign",
+  "log_types_found": [
+    "audit",
+    "dns"
+  ],
+  "total_logs": {
+    "audit": 133954,
+    "dns": 776
+  },
+  "malicious_logs": {
+    "audit": 5680,
+    "dns": 83
+  },
+  "benign_logs": {
+    "audit": 128274,
+    "dns": 693
+  }
+}

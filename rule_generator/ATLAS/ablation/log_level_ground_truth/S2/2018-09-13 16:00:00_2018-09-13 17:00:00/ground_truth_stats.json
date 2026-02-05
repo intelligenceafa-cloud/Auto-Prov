@@ -1,0 +1,17 @@
+{
+  "dataset": "S2",
+  "timestamp": "2018-09-13 16:00:00_2018-09-13 17:00:00",
+  "attack_type": "Malvertising dominate",
+  "log_types_found": [
+    "audit"
+  ],
+  "total_logs": {
+    "audit": 6192
+  },
+  "malicious_logs": {
+    "audit": 14
+  },
+  "benign_logs": {
+    "audit": 6178
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "datasets": {
+    "S1": {
+      "attack_type": "Strategic web compromise",
+      "timestamps": {
+        "2018-11-02 21:00:00_2018-11-02 22:00:00": {
+          "malicious": 0,
+          "benign": 1,
+          "log_types": [
+            "audit"
+          ]
+        },
+        "2018-11-05 20:00:00_2018-11-05 21:00:00": {
+          "malicious": 5172,
+          "benign": 57003,
+          "log_types": [
+            "audit"
+          ]
+        },
+        "2018-11-02 23:00:00_2018-11-03 00:00:00": {
+          "malicious": 0,
+          "benign": 4,
+          "log_types": [
+            "dns"
+          ]
+        },
+        "2018-11-06 01:00:00_2018-11-06 02:00:00": {
+          "malicious": 56,
+          "benign": 1517,
+          "log_types": [
+            "firefox"
+          ]
+        },
+        "2018-11-02 22:00:00_2018-11-02 23:00:00": {
+          "malicious": 23,
+          "benign": 36184,
+          "log_types": [
+            "audit",
+            "dns"
+          ]
+        },
+        "2018-11-03 02:00:00_2018-11-03 03:00:00": {
+          "malicious": 0,
+          "benign": 1105,
+          "log_types": [
+            "firefox"
+          ]
+        }
+      },
+      "total_malicious": 5251,
+      "total_benign": 95814
+    },
+    "S2": {
+      "attack_type": "Malvertising dominate",
+      "timestamps": {
+        "2018-09-15 12:00:00_2018-09-15 13:00:00": {
+          "malicious": 30,
+          "benign": 4564,
+          "log_types": [
+            "firefox"
+          ]
+        },
+        "2018-08-31 19:00:00_2018-08-31 20:00:00": {
+          "malicious": 0,
+          "benign": 4088,
+          "log_types": [
+            "audit"
+          ]
+        },
+        "2018-08-31 20:00:00_2018-08-31 21:00:00": {
+          "malicious": 0,
+          "benign": 1726,
+          "log_types": [
+            "audit"
+          ]
+        },
+        "2018-09-15 08:00:00_2018-09-15 09:00:00": {
+          "malicious": 43,
+          "benign": 345914,
+          "log_types": [
+            "audit",
+            "dns"
+          ]
+        },
+        "2018-09-15 13:00:00_2018-09-15 14:00:00": {
+          "malicious": 0,
+          "benign": 626,
+          "log_types": [
+            "firefox"
+          ]
+        },
+        "2018-09-01 11:00:00_2018-09-01 12:00:00": {
+          "malicious": 0,
+          "benign": 8113,
+          "log_types": [
+            "audit"
+          ]
+        },
+        "2018-09-15 09:00:00_2018-09-15 10:00:00": {
+          "malicious": 17867,
+          "benign": 17034,
+          "log_types": [
+            "audit",
+            "dns"
+          ]
+        },
+        "2018-08-31 18:00:00_2018-08-31 19:00:00": {
+          "malicious": 0,
+          "benign": 11136,
+          "log_types": [
+            "audit"
+          ]
+        },
+        "2018-09-13 16:00:00_2018-09-13 17:00:00": {
+          "malicious": 14,
+          "benign": 6178,
+          "log_types": [
+            "audit"
+          ]
+        }
+      },
+      "total_malicious": 17954,
+      "total_benign": 399379
+    },
+    "S3": {
+      "attack_type": "Spam campaign",
+      "timestamps": {
+        "2018-12-01 19:00:00_2018-12-01 20:00:00": {
+          "malicious": 6,
+          "benign": 4070,
+          "log_types": [
+            "firefox"
+          ]
+        },
+        "2018-12-01 14:00:00_2018-12-01 15:00:00": {
+          "malicious": 5763,
+          "benign": 128967,
+          "log_types": [
+            "audit",
+            "dns"
+          ]
+        }
+      },
+      "total_malicious": 5769,
+      "total_benign": 133037
+    },
+    "S4": {
+      "attack_type": "Pony campaign",
+      "timestamps": {
+        "2018-12-04 19:00:00_2018-12-04 20:00:00": {
+          "malicious": 18121,
+          "benign": 112684,
+          "log_types": [
+            "audit",
+            "dns"
+          ]
+        },
+        "2018-12-05 00:00:00_2018-12-05 01:00:00": {
+          "malicious": 6,
+          "benign": 3471,
+          "log_types": [
+            "firefox"
+          ]
+        }
+      },
+      "total_malicious": 18127,
+      "total_benign": 116155
+    }
+  },
+  "total_statistics": {
+    "total_malicious_logs": 47101,
+    "total_benign_logs": 744385,
+    "total_logs": 791486,
+    "timestamps_with_malicious": [
+      {
+        "dataset": "S1",
+        "timestamp": "2018-11-02 22:00:00_2018-11-02 23:00:00",
+        "malicious_count": 23,
+        "attack_type": "Strategic web compromise"
+      },
+      {
+        "dataset": "S1",
+        "timestamp": "2018-11-05 20:00:00_2018-11-05 21:00:00",
+        "malicious_count": 5172,
+        "attack_type": "Strategic web compromise"
+      },
+      {
+        "dataset": "S1",
+        "timestamp": "2018-11-06 01:00:00_2018-11-06 02:00:00",
+        "malicious_count": 56,
+        "attack_type": "Strategic web compromise"
+      },
+      {
+        "dataset": "S2",
+        "timestamp": "2018-09-13 16:00:00_2018-09-13 17:00:00",
+        "malicious_count": 14,
+        "attack_type": "Malvertising dominate"
+      },
+      {
+        "dataset": "S2",
+        "timestamp": "2018-09-15 08:00:00_2018-09-15 09:00:00",
+        "malicious_count": 43,
+        "attack_type": "Malvertising dominate"
+      },
+      {
+        "dataset": "S2",
+        "timestamp": "2018-09-15 09:00:00_2018-09-15 10:00:00",
+        "malicious_count": 17867,
+        "attack_type": "Malvertising dominate"
+      },
+      {
+        "dataset": "S2",
+        "timestamp": "2018-09-15 12:00:00_2018-09-15 13:00:00",
+        "malicious_count": 30,
+        "attack_type": "Malvertising dominate"
+      },
+      {
+        "dataset": "S3",
+        "timestamp": "2018-12-01 14:00:00_2018-12-01 15:00:00",
+        "malicious_count": 5763,
+        "attack_type": "Spam campaign"
+      },
+      {
+        "dataset": "S3",
+        "timestamp": "2018-12-01 19:00:00_2018-12-01 20:00:00",
+        "malicious_count": 6,
+        "attack_type": "Spam campaign"
+      },
+      {
+        "dataset": "S4",
+        "timestamp": "2018-12-04 19:00:00_2018-12-04 20:00:00",
+        "malicious_count": 18121,
+        "attack_type": "Pony campaign"
+      },
+      {
+        "dataset": "S4",
+        "timestamp": "2018-12-05 00:00:00_2018-12-05 01:00:00",
+        "malicious_count": 6,
+        "attack_type": "Pony campaign"
+      }
+    ]
+  }
+}

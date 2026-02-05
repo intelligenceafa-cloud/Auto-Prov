@@ -1,0 +1,21 @@
+{
+  "dataset": "S1",
+  "timestamp": "2018-11-02 22:00:00_2018-11-02 23:00:00",
+  "attack_type": "Strategic web compromise",
+  "log_types_found": [
+    "audit",
+    "dns"
+  ],
+  "total_logs": {
+    "audit": 35727,
+    "dns": 480
+  },
+  "malicious_logs": {
+    "audit": 0,
+    "dns": 23
+  },
+  "benign_logs": {
+    "audit": 35727,
+    "dns": 457
+  }
+}

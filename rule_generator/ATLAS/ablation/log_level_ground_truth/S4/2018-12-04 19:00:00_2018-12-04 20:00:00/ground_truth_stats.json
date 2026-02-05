@@ -1,0 +1,21 @@
+{
+  "dataset": "S4",
+  "timestamp": "2018-12-04 19:00:00_2018-12-04 20:00:00",
+  "attack_type": "Pony campaign",
+  "log_types_found": [
+    "audit",
+    "dns"
+  ],
+  "total_logs": {
+    "audit": 130123,
+    "dns": 682
+  },
+  "malicious_logs": {
+    "audit": 18102,
+    "dns": 19
+  },
+  "benign_logs": {
+    "audit": 112021,
+    "dns": 663
+  }
+}
