@@ -1,0 +1,2 @@
+subgraph_id,num_nodes,num_edges,anomaly_score,enriched_edges
+0,28,43,0.30454280981793996,43

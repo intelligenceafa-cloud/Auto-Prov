@@ -1,0 +1,18 @@
+{
+  "source_uuid": "EE1F4F04-0300-0000-0000-000000000020",
+  "target_uuid": "EF1F4F04-0300-0000-0000-000000000020",
+  "source_enames": [
+    "/bin/bash",
+    "},"
+  ],
+  "target_enames": [
+    "/bin/bash",
+    "},"
+  ],
+  "source_type": "shell invocation",
+  "target_type": "shell invocation",
+  "source_functionality": "This command invokes the Bash shell, which is a Unix shell and command-line interpreter. It allows users to interact with the operating system by executing commands, running scripts, and managing system resources. The Bash shell provides a command-line interface for interacting with the system, supporting features like file management, process control, and input/output redirection.",
+  "target_functionality": "This command invokes the Bash shell, which is a Unix shell and command-line interpreter. It allows users to interact with the operating system by executing commands, running scripts, and managing system resources. The Bash shell provides a command-line interface for interacting with the system, supporting features like file management, process control, and input/output redirection.",
+  "edge_action": "-bash",
+  "timestamp": 1.5235718649341683e+18
+}
