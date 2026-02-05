@@ -1,0 +1,2940 @@
+[
+    {
+        "input": "\"2018-11-03 02:45:03.042000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=11815000 uri=https://www.google.com/gen_204?atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&s=web&t=all&imn=52&adh=&ima=18&ime=1&imeb=13&imeo=6&wh=755&scp=0&fld=2304.13330078125&sys=hc.4&rt=aft.764,dcl.1538,iml.764,ol.2343,prt.552,xjs.1519,xjsee.1519,xjses.1035,xjsls.764,sct.477,wsrt.211,cst.0,dnst.2,rqst.967,rspt.836,rqstt.50,unt.4,cstt.6,dit.1655&zx=1541213102932]\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&s=web&t=all&imn=52&adh=&ima=18&ime=1&imeb=13&imeo=6&wh=755&scp=0&fld=2304.13330078125&sys=hc.4&rt=aft.764,dcl.1538,iml.764,ol.2343,prt.552,xjs.1519,xjsee.1519,xjses.1035,xjsls.764,sct.477,wsrt.211,cst.0,dnst.2,rqst.967,rspt.836,rqstt.50,unt.4,cstt.6,dit.1655&zx=1541213102932",
+                "dest": "www.google.com",
+                "Action": "get request",
+                "timestamp": "2018-11-03 02:45:03.042000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "hosts",
+                "timestamp": "2018-11-03 02:45:03.042000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&s=web&t=all&imn=52&adh=&ima=18&ime=1&imeb=13&imeo=6&wh=755&scp=0&fld=2304.13330078125&sys=hc.4&rt=aft.764,dcl.1538,iml.764,ol.2343,prt.552,xjs.1519,xjsee.1519,xjses.1035,xjsls.764,sct.477,wsrt.211,cst.0,dnst.2,rqst.967,rspt.836,rqstt.50,unt.4,cstt.6,dit.1655&zx=1541213102932",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:03.042000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&s=web&t=all&imn=52&adh=&ima=18&ime=1&imeb=13&imeo=6&wh=755&scp=0&fld=2304.13330078125&sys=hc.4&rt=aft.764,dcl.1538,iml.764,ol.2343,prt.552,xjs.1519,xjsee.1519,xjses.1035,xjsls.764,sct.477,wsrt.211,cst.0,dnst.2,rqst.967,rspt.836,rqstt.50,unt.4,cstt.6,dit.1655&zx=1541213102932",
+                "dest": "www.google.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:03.042000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&s=web&t=all&imn=52&adh=&ima=18&ime=1&imeb=13&imeo=6&wh=755&scp=0&fld=2304.13330078125&sys=hc.4&rt=aft.764,dcl.1538,iml.764,ol.2343,prt.552,xjs.1519,xjsee.1519,xjses.1035,xjsls.764,sct.477,wsrt.211,cst.0,dnst.2,rqst.967,rspt.836,rqstt.50,unt.4,cstt.6,dit.1655&zx=1541213102932",
+                "dest": "gen_204",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:03.042000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.933000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&s=web&t=all&imn=52&adh=&ima=18&ime=1&imeb=13&imeo=6&wh=755&scp=0&fld=2304.13330078125&sys=hc.4&rt=aft.764,dcl.1538,iml.764,ol.2343,prt.552,xjs.1519,xjsee.1519,xjses.1035,xjsls.764,sct.477,wsrt.211,cst.0,dnst.2,rqst.967,rspt.836,rqstt.50,unt.4,cstt.6,dit.1655&zx=1541213102932\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&s=web&t=all&imn=52&adh=&ima=18&imeb=13&imeo=6&wh=755&scp=0&fld=2304.13330078125&sys=hc.4&rt=aft.764,dcl.1538,iml.764,ol.2343,prt.552,xjs.1519,xjsee.1519,xjses.1035,xjsls.764,sct.477,wsrt.211,cst.0,dnst.2,rqst.967,rspt.836,rqstt.50,unt.4,cstt.6,dit.1655&zx=1541213102932",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.933000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:11.453000 UTC - [Main Thread]: D/nsHttp uri=http://www.google.com/\"",
+        "edges": [
+            {
+                "source": "http://www.google.com/",
+                "dest": "http://www.google.com/",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:11.453000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:06.555000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/ux.js]\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/ux.js",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:06.555000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "ux.js",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:06.555000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:04.110000 UTC - [Main Thread]: V/nsHttp uri=https://www.youtube.com/yts/cssbin/www-main-desktop-watch-page-skeleton-2x-vflQ9GNSj.css\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "www-main-desktop-watch-page-skeleton-2x-vflQ9GNSj.css",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:04.110000"
+            },
+            {
+                "source": "https://www.youtube.com/yts/cssbin/www-main-desktop-watch-page-skeleton-2x-vflQ9GNSj.css",
+                "dest": "www.youtube.com",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:04.110000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "www-main-desktop-watch-page-skeleton-2x-vflQ9GNSj.css",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.youtube.com/yts/cssbin/www-main-desktop-watch-page-skeleton-2x-vflQ9GNSj.css",
+                "dest": "www-main-desktop-watch-page-skeleton-2x-vflQ9GNSj.css",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:04.110000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:47.683000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=e9d43d0 uri=https://www.google.com/logos/doodles/2018/day-of-the-dead-2018-5705827255058432-law.gif]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/logos/doodles/2018/day-of-the-dead-2018-5705827255058432-law.gif",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:47.683000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "day-of-the-dead-2018-5705827255058432-law.gif",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "nsHttp",
+                "dest": "www.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:47.683000"
+            },
+            {
+                "source": "https://www.google.com/logos/doodles/2018/day-of-the-dead-2018-5705827255058432-law.gif",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.google.com/logos/doodles/2018/day-of-the-dead-2018-5705827255058432-law.gif",
+                "dest": "day-of-the-dead-2018-5705827255058432-law.gif",
+                "Action": "uri",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:47.597000 UTC - [Main Thread]: D/nsHttp uri=https://ssl.gstatic.com/gb/images/i2_2ec824b0.png\"",
+        "edges": [
+            {
+                "source": "ssl.gstatic.com",
+                "dest": "i2_2ec824b0.png",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.597000"
+            },
+            {
+                "source": "https://ssl.gstatic.com/gb/images/i2_2ec824b0.png",
+                "dest": "ssl.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.597000"
+            },
+            {
+                "source": "https://ssl.gstatic.com/gb/images/i2_2ec824b0.png",
+                "dest": "i2_2ec824b0.png",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.597000"
+            },
+            {
+                "source": "ssl.gstatic.com",
+                "dest": "i2_2ec824b0.png",
+                "Action": "hosted",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.466000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=d66f740 uri=https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=wmwg8b]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=wmwg8b",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.466000"
+            },
+            {
+                "source": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=wmwg8b",
+                "dest": "notifications.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.466000"
+            },
+            {
+                "source": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=wmwg8b",
+                "dest": "boq.NotificationsOgbUi.en.SFCeVIdDmgU.O",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.466000"
+            },
+            {
+                "source": "d66f740",
+                "dest": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=wmwg8b",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.466000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "d66f740",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.466000"
+            },
+            {
+                "source": "notifications.google.com",
+                "dest": "boq.NotificationsOgbUi.en.SFCeVIdDmgU.O",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=wmwg8b",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.466000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.440000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=http://ocsp.pki.goog/GTSGIAG3]\"",
+        "edges": [
+            {
+                "source": "ocsp.pki.goog",
+                "dest": "http://ocsp.pki.goog/GTSGIAG3",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:51.440000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:47.357000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=e35b270 uri=https://www.google.com/images/hpp/icon-privacy-shield-rgb-120dp.png]\"",
+        "edges": [
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "https://www.google.com/images/hpp/icon-privacy-shield-rgb-120dp.png",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:47.357000"
+            },
+            {
+                "source": "https://www.google.com/images/hpp/icon-privacy-shield-rgb-120dp.png",
+                "dest": "nsHttp HttpChannelParent",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:47.357000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "icon-privacy-shield-rgb-120dp.png",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "e35b270",
+                "dest": "nsHttp HttpChannelParent",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:47.357000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:05.670000 UTC - [Main Thread]: D/nsHttp uri=https://pagead2.googlesyndication.com/pagead/gen_204?rt=third_party&lid=17&sdkv=h.3.0.0&id=ima_html5&c=3148680366698259&domain=www.youtube.com\"",
+        "edges": [
+            {
+                "source": "pagead2.googlesyndication.com",
+                "dest": "https://pagead2.googlesyndication.com/pagead/gen_204?rt=third_party&lid=17&sdkv=h.3.0.0&id=ima_html5&c=3148680366698259&domain=www.youtube.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:05.670000"
+            },
+            {
+                "source": "https://pagead2.googlesyndication.com/pagead/gen_204?rt=third_party&lid=17&sdkv=h.3.0.0&id=ima_html5&c=3148680366698259&domain=www.youtube.com",
+                "dest": "www.youtube.com",
+                "Action": "domain",
+                "timestamp": "2018-11-03 02:45:05.670000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:04.108000 UTC - [Main Thread]: V/nsHttp uri=https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/base.js\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "base.js",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:04.108000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/base.js",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:04.108000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "base.js",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:04.108000"
+            },
+            {
+                "source": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/base.js",
+                "dest": "www.youtube.com",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:04.108000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:08.815000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://r2---sn-20gq0x-a54e.googlevideo.com/videoplayback?expire=1541234708&gir=yes&fvip=5&requiressl=yes&txp=5511222&keepalive=yes&pl=21&ipbits=0&mime=audio%2Fwebm&itag=251&key=yt6&lmt=1541014056944643&signature=03714CB783B571FDDE8FBC5A161A6AAAF730C08E.45690FDB5A0C6970D4BA7ECE3CF02E0B4B693560&ctier=L&c=WEB&source=youtube&mm=31%2C29&mn=sn-20gq0x-a54e%2Csn-vgqsknel&clen=270225&ms=au%2Crdu&mt=1541213022&mv=m&dur=15.081&ei=tAvdW7D-CISMDt6Nq5gK&ip=128.210.106.68&initcwndbps=1620000&id=o-AKfMsGFqBZpSsBmryAWDxiN0jJMZrXnyGyKZZ3epUC5G&sparams=clen%2Cctier%2Cdur%2Cei%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&alr=yes&cpn=M8oDgh-1PVxZdif2&cver=2.20181101&range=65829-139622&rn=6&rbuf=3817]\"",
+        "edges": [
+            {
+                "source": "https://r2---sn-20gq0x-a54e.googlevideo.com/videoplayback?expire=1541234708&gir=yes&fvip=5&requiressl=yes&txp=5511222&keepalive=yes&pl=21&ipbits=0&mime=audio%2Fwebm&itag=251&key=yt6&lmt=1541014056944643&signature=03714CB783B571FDDE8FBC5A161A6AAAF730C08E.45690FDB5A0C6970D4BA7ECE3CF02E0B4B693560&ctier=L&c=WEB&source=youtube&mm=31%2C29&mn=sn-20gq0x-a54e%2Csn-vgqsknel&clen=270225&ms=au%2Crdu&mt=1541213022&mv=m&dur=15.081&ei=tAvdW7D-CISMDt6Nq5gK&ip=128.210.106.68&initcwndbps=1620000&id=o-AKfMsGFqBZpSsBmryAWDxiN0jJMZrXnyGyKZZ3epUC5G&sparams=clen%2Cctier%2Cdur%2Cei%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&alr=yes&cpn=M8oDgh-1PVxZdif2&cver=2.20181101&range=65829-139622&rn=6&rbuf=3817",
+                "dest": "r2---sn-20gq0x-a54e.googlevideo.com",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:08.815000"
+            },
+            {
+                "source": "https://r2---sn-20gq0x-a54e.googlevideo.com/videoplayback?expire=1541234708&gir=yes&fvip=5&requiressl=yes&txp=5511222&keepalive=yes&pl=21&ipbits=0&mime=audio%2Fwebm&itag=251&key=yt6&lmt=1541014056944643&signature=03714CB783B571FDDE8FBC5A161A6AAAF730C08E.45690FDB5A0C6970D4BA7ECE3CF02E0B4B693560&ctier=L&c=WEB&source=youtube&mm=31%2C29&mn=sn-20gq0x-a54e%2Csn-vgqsknel&clen=270225&ms=au%2Crdu&mt=1541213022&mv=m&dur=15.081&ei=tAvdW7D-CISMDt6Nq5gK&ip=128.210.106.68&initcwndbps=1620000&id=o-AKfMsGFqBZpSsBmryAWDxiN0jJMZrXnyGyKZZ3epUC5G&sparams=clen%2Cctier%2Cdur%2Cei%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&alr=yes&cpn=M8oDgh-1PVxZdif2&cver=2.20181101&range=65829-139622&rn=6&rbuf=3817",
+                "dest": "128.210.106.68",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:08.815000"
+            },
+            {
+                "source": "https://r2---sn-20gq0x-a54e.googlevideo.com/videoplayback?expire=1541234708&gir=yes&fvip=5&requiressl=yes&txp=5511222&keepalive=yes&pl=21&ipbits=0&mime=audio%2Fwebm&itag=251&key=yt6&lmt=1541014056944643&signature=03714CB783B571FDDE8FBC5A161A6AAAF730C08E.45690FDB5A0C6970D4BA7ECE3CF02E0B4B693560&ctier=L&c=WEB&source=youtube&mm=31%2C29&mn=sn-20gq0x-a54e%2Csn-vgqsknel&clen=270225&ms=au%2Crdu&mt=1541213022&mv=m&dur=15.081&ei=tAvdW7D-CISMDt6Nq5gK&ip=128.210.106.68&initcwndbps=1620000&id=o-AKfMsGFqBZpSsBmryAWDxiN0jJMZrXnyGyKZZ3epUC5G&sparams=clen%2Cctier%2Cdur%2Cei%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&alr=yes&cpn=M8oDgh-1PVxZdif2&cver=2.20181101&range=65829-139622&rn=6&rbuf=3817",
+                "dest": "r2---sn-20gq0x-a54e.googlevideo.com",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:08.815000"
+            },
+            {
+                "source": "https://r2---sn-20gq0x-a54e.googlevideo.com/videoplayback?expire=1541234708&gir=yes&fvip=5&requiressl=yes&txp=5511222&keepalive=yes&pl=21&ipbits=0&mime=audio%2Fwebm&itag=251&key=yt6&lmt=1541014056944643&signature=03714CB783B571FDDE8FBC5A161A6AAAF730C08E.45690FDB5A0C6970D4BA7ECE3CF02E0B4B693560&ctier=L&c=WEB&source=youtube&mm=31%2C29&mn=sn-20gq0x-a54e%2Csn-vgqsknel&clen=270225&ms=au%2Crdu&mt=1541213022&mv=m&dur=15.081&ei=tAvdW7D-CISMDt6Nq5gK&ip=128.210.106.68&initcwndbps=1620000&id=o-AKfMsGFqBZpSsBmryAWDxiN0jJMZrXnyGyKZZ3epUC5G&sparams=clen%2Cctier%2Cdur%2Cei%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&alr=yes&cpn=M8oDgh-1PVxZdif2&cver=2.20181101&range=65829-139622&rn=6&rbuf=3817",
+                "dest": "128.210.106.68",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:08.815000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.411000 UTC - [Main Thread]: V/nsHttp uri=https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp,wmwg8b/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=OJUrvb\"",
+        "edges": [
+            {
+                "source": "notifications.google.com",
+                "dest": "boq.NotificationsOgbUi.en.SFCeVIdDmgU.O",
+                "Action": "served",
+                "timestamp": "2018-11-03 02:45:20.411000"
+            },
+            {
+                "source": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp,wmwg8b/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=OJUrvb",
+                "dest": "notifications.google.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:20.411000"
+            },
+            {
+                "source": "notifications.google.com",
+                "dest": "boq.NotificationsOgbUi.en.SFCeVIdDmgU.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:20.411000"
+            },
+            {
+                "source": "notifications.google.com",
+                "dest": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp,wmwg8b/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=OJUrvb",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:20.411000"
+            },
+            {
+                "source": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=_b,_tp,wmwg8b/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=OJUrvb",
+                "dest": "boq.NotificationsOgbUi.en.SFCeVIdDmgU.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:20.411000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:18.065000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=10d04000 uri=https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=M8oDgh-1PVxZdif2&ei=tAvdW7D-CISMDt6Nq5gK&el=adunit&docid=x5F6pCyLL8c&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&adformat=1_2&seq=4&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&vps=11.389:N&bwe=11.389:740673&cmt=11.389:7.056&bh=11.389:15.015]\"",
+        "edges": [
+            {
+                "source": "/api/stats/qoe",
+                "dest": "https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=M8oDgh-1PVxZdif2&ei=tAvdW7D-CISMDt6Nq5gK&el=adunit&docid=x5F6pCyLL8c&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&adformat=1_2&seq=4&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&vps=11.389:N&bwe=11.389:740673&cmt=11.389:7.056&bh=11.389:15.015",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:18.065000"
+            },
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=M8oDgh-1PVxZdif2&ei=tAvdW7D-CISMDt6Nq5gK&el=adunit&docid=x5F6pCyLL8c&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&adformat=1_2&seq=4&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&vps=11.389:N&bwe=11.389:740673&cmt=11.389:7.056&bh=11.389:15.015",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:18.065000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "/api/stats/qoe",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=M8oDgh-1PVxZdif2&ei=tAvdW7D-CISMDt6Nq5gK&el=adunit&docid=x5F6pCyLL8c&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&adformat=1_2&seq=4&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&vps=11.389:N&bwe=11.389:740673&cmt=11.389:7.056&bh=11.389:15.015",
+                "Action": "accessed",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=M8oDgh-1PVxZdif2&ei=tAvdW7D-CISMDt6Nq5gK&el=adunit&docid=x5F6pCyLL8c&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&adformat=1_2&seq=4&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&vps=11.389:N&bwe=11.389:740673&cmt=11.389:7.056&bh=11.389:15.015",
+                "dest": "www.youtube.com",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:18.065000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.575000 UTC - [Main Thread]: D/nsHttp uri=https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0\"",
+        "edges": [
+            {
+                "source": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "dest": "apis.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.575000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.575000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "hosts",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:05.090000 UTC - [Main Thread]: D/nsHttp uri=https://r2---sn-20gq0x-a54e.googlevideo.com/generate_204\"",
+        "edges": [
+            {
+                "source": "https://r2---sn-20gq0x-a54e.googlevideo.com/generate_204",
+                "dest": "r2---sn-20gq0x-a54e.googlevideo.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:05.090000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.574000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=113e31c0 uri=https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0]\"",
+        "edges": [
+            {
+                "source": "ID-1",
+                "dest": "ID-5",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.574000"
+            },
+            {
+                "source": "ID-2",
+                "dest": "ID-5",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.574000"
+            },
+            {
+                "source": "ID-3",
+                "dest": "ID-5",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.574000"
+            },
+            {
+                "source": "ID-4",
+                "dest": "ID-5",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.574000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:47.949000 UTC - [Main Thread]: D/nsHttp uri=https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA\"",
+        "edges": [
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.949000"
+            },
+            {
+                "source": "ID-2",
+                "dest": "ID-3",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.949000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.100000 UTC - [Main Thread]: V/nsHttp uri=https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0\"",
+        "edges": [
+            {
+                "source": "apis.google.com",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:14.100000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:14.100000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.457000 UTC - [Main Thread]: D/nsHttp uri=https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0\"",
+        "edges": [
+            {
+                "source": "domain",
+                "dest": "web object",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.457000"
+            },
+            {
+                "source": "website URL",
+                "dest": "domain",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.457000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:04.123000 UTC - [Main Thread]: D/nsHttp uri=https://www.youtube.com/yts/cssbin/www-main-desktop-player-skeleton-2x-vflqcz7cy.css\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "www-main-desktop-player-skeleton-2x-vflqcz7cy.css",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:04.123000"
+            },
+            {
+                "source": "https://www.youtube.com/yts/cssbin/www-main-desktop-player-skeleton-2x-vflqcz7cy.css",
+                "dest": "www-main-desktop-player-skeleton-2x-vflqcz7cy.css",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:04.123000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "www-main-desktop-player-skeleton-2x-vflqcz7cy.css",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.youtube.com/yts/cssbin/www-main-desktop-player-skeleton-2x-vflqcz7cy.css",
+                "dest": "www.youtube.com",
+                "Action": "accessed",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.030000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/gen_204?atyp=i&zx=1541213120028&ei=uwvdW8_IJMLujwSfi7qgBA&ogf=.40.&ogrp=&ogv=219063765.0&ogd=&ogc=USA&ogl=en&oggv=es_plusone_gc_20181027.0_p0&oge=43&ogex=40400&ogp=1&ogsr=1&ogus=1\"",
+        "edges": [
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:20.030000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:08.766000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2dd7c0 uri=https://r2---sn-20gq0x-a54e.googlevideo.com/videoplayback?expire=1541234708&gir=yes&fvip=5&requiressl=yes&txp=5511222&keepalive=yes&pl=21&ipbits=0&mime=audio%2Fwebm&itag=251&key=yt6&lmt=1541014056944643&signature=03714CB783B571FDDE8FBC5A161A6AAAF730C08E.45690FDB5A0C6970D4BA7ECE3CF02E0B4B693560&ctier=L&c=WEB&source=youtube&mm=31%2C29&mn=sn-20gq0x-a54e%2Csn-vgqsknel&clen=270225&ms=au%2Crdu&mt=1541213022&mv=m&dur=15.081&ei=tAvdW7D-CISMDt6Nq5gK&ip=128.210.106.68&initcwndbps=1620000&id=o-AKfMsGFqBZpSsBmryAWDxiN0jJMZrXnyGyKZZ3epUC5G&sparams=clen%2Cctier%2Cdur%2Cei%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&alr=yes&cpn=M8oDgh-1PVxZdif2&cver=2.20181101&range=65829-139622&rn=6&rbuf=3817]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "https://r2---sn-20gq0x-a54e.googlevideo.com/videoplayback?expire=1541234708&gir=yes&fvip=5&requiressl=yes&txp=5511222&keepalive=yes&pl=21&ipbits=0&mime=audio%2Fwebm&itag=251&key=yt6&lmt=1541014056944643&signature=03714CB783B571FDDE8FBC5A161A6AAAF730C08E.45690FDB5A0C6970D4BA7ECE3CF02E0B4B693560&ctier=L&c=WEB&source=youtube&mm=31%2C29&mn=sn-20gq0x-a54e%2Csn-vgqsknel&clen=270225&ms=au%2Crdu&mt=1541213022&mv=m&dur=15.081&ei=tAvdW7D-CISMDt6Nq5gK&ip=128.210.106.68&initcwndbps=1620000&id=o-AKfMsGFqBZpSsBmryAWDxiN0jJMZrXnyGyKZZ3epUC5G&sparams=clen%2Cctier%2Cdur%2Cei%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Ckeepalive%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cexpire&alr=yes&cpn=M8oDgh-1PVxZdif2&cver=2.20181101&range=65829-139622&rn=6&rbuf=3817",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:08.766000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.438000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=http://ocsp.pki.goog/GTSGIAG3]\"",
+        "edges": [
+            {
+                "source": "ocsp.pki.goog",
+                "dest": "http://ocsp.pki.goog/GTSGIAG3",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:51.438000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:13.948000 UTC - [Main Thread]: D/nsHttp uri=https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA\"",
+        "edges": [
+            {
+                "source": "www.gstatic.com",
+                "dest": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:13.948000"
+            },
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:13.948000"
+            },
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "served",
+                "timestamp": "2018-11-03 02:45:13.948000"
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "www.gstatic.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:13.948000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:10.260000 UTC - [Main Thread]: D/nsHttp uri=https://i.ytimg.com/vi/6ONRf7h3Mdk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAh4ZPImTbxVCg0T0sWhwBBMYjXLw\"",
+        "edges": [
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "hosted",
+                "timestamp": "2018-11-03 02:45:10.260000"
+            },
+            {
+                "source": "https://i.ytimg.com/vi/6ONRf7h3Mdk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAh4ZPImTbxVCg0T0sWhwBBMYjXLw",
+                "dest": "i.ytimg.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:10.260000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:21.004000 UTC - [Main Thread]: V/nsHttp uri=https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes_simple/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0\"",
+        "edges": [
+            {
+                "source": "apis.google.com",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "served",
+                "timestamp": "2018-11-03 02:45:21.004000"
+            },
+            {
+                "source": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes_simple/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "dest": "apis.google.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:21.004000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes_simple/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:21.004000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:21.004000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:21.045000 UTC - [Main Thread]: V/nsHttp uri=https://play.google.com/log?format=json&hasfast=true&authuser=0\"",
+        "edges": [
+            {
+                "source": "https://play.google.com/log?format=json&hasfast=true&authuser=0",
+                "dest": "https://play.google.com/log?format=json&hasfast=true&authuser=0",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:21.045000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:12.069000 UTC - [Main Thread]: D/nsHttp uri=https://i.ytimg.com/vi/LjxulQ1bEWg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDP7_OM5gugL6Fkh6rJXVm7W5F89w\"",
+        "edges": [
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:12.069000"
+            },
+            {
+                "source": "https://i.ytimg.com/vi/LjxulQ1bEWg/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDP7_OM5gugL6Fkh6rJXVm7W5F89w",
+                "dest": "i.ytimg.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:12.069000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:00.371000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&vet=10ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ4tUDCAs..h&zx=1541213100368\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&vet=10ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ4tUDCAs..h&zx=1541213100368",
+                "dest": "https://www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:00.371000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:15.041000 UTC - [Main Thread]: D/nsHttp uri=https://ssl.gstatic.com/gb/images/i2_2ec824b0.png\"",
+        "edges": [
+            {
+                "source": "ssl.gstatic.com",
+                "dest": "i2_2ec824b0.png",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:15.041000"
+            },
+            {
+                "source": "https://ssl.gstatic.com/gb/images/i2_2ec824b0.png",
+                "dest": "i2_2ec824b0.png",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:15.041000"
+            },
+            {
+                "source": "https://ssl.gstatic.com/gb/images/i2_2ec824b0.png",
+                "dest": "ssl.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:15.041000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:52.957000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.google.com/complete/search?q=y&cp=1&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823]\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/complete/search?q=y&cp=1&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:52.957000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.722000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/async/bgasy?ei=pgvdW6XQNuLLjwTEyY7gDg&hl=en&yv=3&async=_fmt:jspb\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/async/bgasy?ei=pgvdW6XQNuLLjwTEyY7gDg&hl=en&yv=3&async=_fmt:jspb",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.722000"
+            },
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.722000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:03.944000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=1713a950 uri=https://www.youtube.com/watch?v=RH9kl6XZixo]\"",
+        "edges": [
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "https://www.youtube.com/watch?v=RH9kl6XZixo",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:03.944000"
+            },
+            {
+                "source": "https://www.youtube.com/watch?v=RH9kl6XZixo",
+                "dest": "www.youtube.com",
+                "Action": "uri",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.youtube.com/watch?v=RH9kl6XZixo",
+                "dest": "watch?v=RH9kl6XZixo",
+                "Action": "uri",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:13.329000 UTC - [Main Thread]: V/nsHttp uri=https://ssl.gstatic.com/gb/images/i2_2ec824b0.png\"",
+        "edges": [
+            {
+                "source": "ssl.gstatic.com",
+                "dest": "i2_2ec824b0.png",
+                "Action": "hosted",
+                "timestamp": "2018-11-03 02:45:13.329000"
+            },
+            {
+                "source": "https://ssl.gstatic.com/gb/images/i2_2ec824b0.png",
+                "dest": "ssl.gstatic.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:13.329000"
+            },
+            {
+                "source": "ssl.gstatic.com",
+                "dest": "i2_2ec824b0.png",
+                "Action": "hosts",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.100000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2dcf80 uri=https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0]\"",
+        "edges": [
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:14.100000"
+            },
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:14.100000"
+            },
+            {
+                "source": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "dest": "apis.google.com",
+                "Action": "referer",
+                "timestamp": "2018-11-03 02:45:14.100000"
+            },
+            {
+                "source": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:14.100000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.643000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/gen_204?atyp=csi&ei=ogvdW7TnBaPgjwSsiaXIDw&s=jsa&jsi=s,et.click,n.iDPoPb,cn.2&zx=1541213091641\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=ogvdW7TnBaPgjwSsiaXIDw&s=jsa&jsi=s,et.click,n.iDPoPb,cn.2&zx=1541213091641",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.643000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.368000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.368000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.368000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.572000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=csi&ei=ogvdW7TnBaPgjwSsiaXIDw&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213091571\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=ogvdW7TnBaPgjwSsiaXIDw&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213091571",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.572000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.359000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&s=jsa&jsi=s,et.click,n.iDPoPb,cn.2&zx=1541213096358\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&s=jsa&jsi=s,et.click,n.iDPoPb,cn.2&zx=1541213096358",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:56.359000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:11.465000 UTC - [Main Thread]: V/nsHttp uri=https://i.ytimg.com/vi/RH9kl6XZixo/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA6158euDAia-9RH909rqSQ94kLWw\"",
+        "edges": [
+            {
+                "source": "i.ytimg.com",
+                "dest": "https://i.ytimg.com/vi/RH9kl6XZixo/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA6158euDAia-9RH909rqSQ94kLWw",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:11.465000"
+            },
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:11.465000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.029000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=i&zx=1541213120028&ei=uwvdW8_IJMLujwSfi7qgBA&ogf=.40.&ogrp=&ogv=219063765.0&ogd=&ogc=USA&ogl=en&oggv=es_plusone_gc_20181027.0_p0&oge=43&ogex=40400&ogp=1&ogsr=1&ogus=1\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=i&zx=1541213120028&ei=uwvdW8_IJMLujwSfi7qgBA&ogf=.40.&ogrp=&ogv=219063765.0&ogd=&ogc=USA&ogl=en&oggv=es_plusone_gc_20181027.0_p0&oge=43&ogex=40400&ogp=1&ogsr=1&ogus=1",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:20.029000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:06.219000 UTC - [Main Thread]: V/nsHttp uri=https://www.youtube.com/get_endscreen?client=1&ei=sAvdW6fTK8GpjQTc3oL4BQ&v=RH9kl6XZixo\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "get_endscreen",
+                "Action": "serves",
+                "timestamp": "2018-11-03 02:45:06.219000"
+            },
+            {
+                "source": "https://www.youtube.com/get_endscreen?client=1&ei=sAvdW6fTK8GpjQTc3oL4BQ&v=RH9kl6XZixo",
+                "dest": "www.youtube.com",
+                "Action": "accesses",
+                "timestamp": "2018-11-03 02:45:06.219000"
+            },
+            {
+                "source": "https://www.youtube.com/get_endscreen?client=1&ei=sAvdW6fTK8GpjQTc3oL4BQ&v=RH9kl6XZixo",
+                "dest": "www.youtube.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:06.219000"
+            },
+            {
+                "source": "https://www.youtube.com/get_endscreen?client=1&ei=sAvdW6fTK8GpjQTc3oL4BQ&v=RH9kl6XZixo",
+                "dest": "get_endscreen",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:06.219000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.314000 UTC - [Main Thread]: V/nsHttp uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYztnNfNaooASiss7h09xVfzMImIrWd01Ui35IN5kCx6B4p2KbKncy1Q\"",
+        "edges": [
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYztnNfNaooASiss7h09xVfzMImIrWd01Ui35IN5kCx6B4p2KbKncy1Q",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.314000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcRYztnNfNaooASiss7h09xVfzMImIrWd01Ui35IN5kCx6B4p2KbKncy1Q",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.314000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:11.468000 UTC - [Main Thread]: V/nsHttp uri=https://i.ytimg.com/vi/QWTgehY1cB8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBVz-YjHG49w0tOC6cANJ0oN_4sSA\"",
+        "edges": [
+            {
+                "source": "i.ytimg.com",
+                "dest": "https://i.ytimg.com/vi/QWTgehY1cB8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBVz-YjHG49w0tOC6cANJ0oN_4sSA",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:11.468000"
+            },
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:11.468000"
+            },
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:11.468000"
+            },
+            {
+                "source": "https://i.ytimg.com/vi/QWTgehY1cB8/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBVz-YjHG49w0tOC6cANJ0oN_4sSA",
+                "dest": "i.ytimg.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:11.468000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:12.061000 UTC - [Main Thread]: V/nsHttp uri=https://i.ytimg.com/vi/_EyZUTDAH0U/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDO3L1wfM0yNJM39yM6xffJ51ZYkQ\"",
+        "edges": [
+            {
+                "source": "i.ytimg.com",
+                "dest": "https://i.ytimg.com/vi/_EyZUTDAH0U/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDO3L1wfM0yNJM39yM6xffJ51ZYkQ",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:12.061000"
+            },
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:12.061000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:13.061000 UTC - [Main Thread]: D/nsHttp uri=https://i.ytimg.com/vi/CTFtOOh47oo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDAIotKOQzLfoCYc_MSQL9VWiKg_Q\"",
+        "edges": [
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:13.061000"
+            },
+            {
+                "source": "https://i.ytimg.com/vi/CTFtOOh47oo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDAIotKOQzLfoCYc_MSQL9VWiKg_Q",
+                "dest": "i.ytimg.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:13.061000"
+            },
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "hosted",
+                "timestamp": "2018-11-03 02:45:13.061000"
+            },
+            {
+                "source": "https://i.ytimg.com/vi/CTFtOOh47oo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDAIotKOQzLfoCYc_MSQL9VWiKg_Q",
+                "dest": "hqdefault.jpg",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:13.061000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.530000 UTC - [Main Thread]: D/nsHttp uri=https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA\"",
+        "edges": [
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "www.gstatic.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:02.530000"
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "www.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.530000"
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "accessed",
+                "timestamp": "..."
+            },
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "served",
+                "timestamp": "2018-11-03 02:45:02.530000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:47.143000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=15b0c800 uri=http://ocsp.pki.goog/GTSGIAG3]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "http://ocsp.pki.goog/GTSGIAG3",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:47.143000"
+            },
+            {
+                "source": "15b0c800",
+                "dest": "http://ocsp.pki.goog/GTSGIAG3",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.143000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:47.961000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&rt=wsrt.465,aft.609,prt.365\"",
+        "edges": [
+            {
+                "source": "Main Thread",
+                "dest": "nsHttp",
+                "Action": "executes",
+                "timestamp": "2018-11-03 02:44:47.961000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&rt=wsrt.465,aft.609,prt.365",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.961000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&rt=wsrt.465,aft.609,prt.365",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.961000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&rt=wsrt.465,aft.609,prt.365",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.961000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.520000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/xjs/_/js/k=xjs.s.en_US.bYx5AqWM01E.O/am=DIBFmIEA8n8KIAECq2CDBeagxKAE/rt=j/d=1/exm=sx,Fkg7bd,HcFEGb,IvlUe,MC8mtf,OF7gzc,RMhBfe,T4BAC,TJw5qb,TbaHGc,Y33vzc,cdos,cr,hsm,iDPoPb,jsa,mvYTse,r,tg8oTe,uz938c,vWNDde,ws9Tlc,xpltpb,yQ43ff,d,csi/ed=1/dg=2/rs=ACT90oHlT0903ch7Gxmk4aIIkyueTYnAjg/m=sb_wiz,aa,abd,async,dvl,foot,ifl,ipv6,lu,m,mu,sf,xz7cCd?xjs=s1\"",
+        "edges": [
+            {
+                "source": "domain",
+                "dest": "web object",
+                "Action": "hosted",
+                "timestamp": "2018-11-03 02:45:14.520000"
+            },
+            {
+                "source": "URL",
+                "dest": "domain",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:14.520000"
+            },
+            {
+                "source": "domain",
+                "dest": "web object",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:14.520000"
+            },
+            {
+                "source": "domain",
+                "dest": "web object",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "URL",
+                "dest": "domain",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:14.520000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.701000 UTC - [Main Thread]: V/nsHttp uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4FkzfiQ62bWWov6eaD2a2yONo_A18y2x7VFbHVH6TCXlXfqvuh1wPg\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcTW4FkzfiQ62bWWov6eaD2a2yONo_A18y2x7VFbHVH6TCXlXfqvuh1wPg",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:44:55.701000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4FkzfiQ62bWWov6eaD2a2yONo_A18y2x7VFbHVH6TCXlXfqvuh1wPg",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:44:55.701000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW4FkzfiQ62bWWov6eaD2a2yONo_A18y2x7VFbHVH6TCXlXfqvuh1wPg",
+                "dest": "images?q=tbn:ANd9GcTW4FkzfiQ62bWWov6eaD2a2yONo_A18y2x7VFbHVH6TCXlXfqvuh1wPg",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:44:55.701000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.317000 UTC - [Main Thread]: V/nsHttp uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjWTcq3HgGfQkiRgGdOTwYHjJFseDdji8txY3zgNo7u3HXBxKJJMkjw\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcTAjWTcq3HgGfQkiRgGdOTwYHjJFseDdji8txY3zgNo7u3HXBxKJJMkjw",
+                "Action": "hosted",
+                "timestamp": "2018-11-03 02:45:02.317000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjWTcq3HgGfQkiRgGdOTwYHjJFseDdji8txY3zgNo7u3HXBxKJJMkjw",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:02.317000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcTAjWTcq3HgGfQkiRgGdOTwYHjJFseDdji8txY3zgNo7u3HXBxKJJMkjw",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.317000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjWTcq3HgGfQkiRgGdOTwYHjJFseDdji8txY3zgNo7u3HXBxKJJMkjw",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.317000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAjWTcq3HgGfQkiRgGdOTwYHjJFseDdji8txY3zgNo7u3HXBxKJJMkjw",
+                "dest": "images?q=tbn:ANd9GcTAjWTcq3HgGfQkiRgGdOTwYHjJFseDdji8txY3zgNo7u3HXBxKJJMkjw",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:02.317000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.512000 UTC - [Main Thread]: D/nsHttp uri=https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA\"",
+        "edges": [
+            {
+                "source": "ID-2",
+                "dest": "ID-3",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.512000"
+            },
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.512000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.163000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://lh3.googleusercontent.com/-H1hzGuWn3rU/AAAAAAAAAAI/AAAAAAAAAAA/ABtNlbDyijzvVinQYDoG3B-Ykbg6pBVaWA/s192-c-mo/photo.jpg]\"",
+        "edges": [
+            {
+                "source": "https://lh3.googleusercontent.com/-H1hzGuWn3rU/AAAAAAAAAAI/AAAAAAAAAAA/ABtNlbDyijzvVinQYDoG3B-Ykbg6pBVaWA/s192-c-mo/photo.jpg",
+                "dest": "lh3.googleusercontent.com",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:20.163000"
+            },
+            {
+                "source": "lh3.googleusercontent.com",
+                "dest": "photo.jpg",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:20.163000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.700000 UTC - [Main Thread]: V/nsHttp uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX8QYd1c2Uu3PpVxYLszPZSTidRku5tK_sSgLMzLUqnVsXAloMEdFofg\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcTX8QYd1c2Uu3PpVxYLszPZSTidRku5tK_sSgLMzLUqnVsXAloMEdFofg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.700000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX8QYd1c2Uu3PpVxYLszPZSTidRku5tK_sSgLMzLUqnVsXAloMEdFofg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.700000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.314000 UTC - [Main Thread]: D/nsHttp uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmL6GjM9SKCXouRHBZdPIueHtI0KTwXR0yYnTMT1K2bcJvJWwZUcGDZA\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcRmL6GjM9SKCXouRHBZdPIueHtI0KTwXR0yYnTMT1K2bcJvJWwZUcGDZA",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.314000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmL6GjM9SKCXouRHBZdPIueHtI0KTwXR0yYnTMT1K2bcJvJWwZUcGDZA",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.314000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmL6GjM9SKCXouRHBZdPIueHtI0KTwXR0yYnTMT1K2bcJvJWwZUcGDZA",
+                "dest": "images?q=tbn:ANd9GcRmL6GjM9SKCXouRHBZdPIueHtI0KTwXR0yYnTMT1K2bcJvJWwZUcGDZA",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.314000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:10.254000 UTC - [Main Thread]: V/nsHttp uri=https://yt3.ggpht.com/-H1hzGuWn3rU/AAAAAAAAAAI/AAAAAAAAAAA/qtOCFSCUB38/s88-c-k-no-mo-rj-c0xffffff/photo.jpg\"",
+        "edges": [
+            {
+                "source": "yt3.ggpht.com",
+                "dest": "photo.jpg",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:10.254000"
+            },
+            {
+                "source": "https://yt3.ggpht.com/-H1hzGuWn3rU/AAAAAAAAAAI/AAAAAAAAAAA/qtOCFSCUB38/s88-c-k-no-mo-rj-c0xffffff/photo.jpg",
+                "dest": "yt3.ggpht.com",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:10.254000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.298000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&vet=10ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ4tUDCAs..s&zx=1541213096298\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&vet=10ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ4tUDCAs..s&zx=1541213096298",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:56.298000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.805000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:14.805000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.893000 UTC - [Main Thread]: V/nsHttp uri=https://googleads.g.doubleclick.net/pagead/drt/si?ogt=1&pli=1&auth=qwYMRLog9VehTifytFqLtEatevtXbhKblr5WFoo4it5GOUpu9bqz-MuL1_aQJd3J8TZLwA.\"",
+        "edges": [
+            {
+                "source": "https://googleads.g.doubleclick.net/pagead/drt/si?ogt=1&pli=1&auth=qwYMRLog9VehTifytFqLtEatevtXbhKblr5WFoo4it5GOUpu9bqz-MuL1_aQJd3J8TZLwA.",
+                "dest": "https://googleads.g.doubleclick.net",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.893000"
+            },
+            {
+                "source": "https://googleads.g.doubleclick.net",
+                "dest": "https://googleads.g.doubleclick.net/pagead/drt/si?ogt=1&pli=1&auth=qwYMRLog9VehTifytFqLtEatevtXbhKblr5WFoo4it5GOUpu9bqz-MuL1_aQJd3J8TZLwA.",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.893000"
+            },
+            {
+                "source": "https://googleads.g.doubleclick.net/pagead/drt/si?ogt=1&pli=1&auth=qwYMRLog9VehTifytFqLtEatevtXbhKblr5WFoo4it5GOUpu9bqz-MuL1_aQJd3J8TZLwA.",
+                "dest": "https://googleads.g.doubleclick.net",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.893000"
+            },
+            {
+                "source": "https://googleads.g.doubleclick.net/pagead/drt/si?ogt=1&pli=1&auth=qwYMRLog9VehTifytFqLtEatevtXbhKblr5WFoo4it5GOUpu9bqz-MuL1_aQJd3J8TZLwA.",
+                "dest": "https://googleads.g.doubleclick.net/pagead/drt/si?ogt=1&pli=1&auth=qwYMRLog9VehTifytFqLtEatevtXbhKblr5WFoo4it5GOUpu9bqz-MuL1_aQJd3J8TZLwA.",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.893000"
+            },
+            {
+                "source": "https://googleads.g.doubleclick.net",
+                "dest": "https://googleads.g.doubleclick.net/pagead/drt/si?ogt=1&pli=1&auth=qwYMRLog9VehTifytFqLtEatevtXbhKblr5WFoo4it5GOUpu9bqz-MuL1_aQJd3J8TZLwA.",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.893000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.361000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&ved=0ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ39UDCAk&zx=1541213096360\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&ved=0ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ39UDCAk&zx=1541213096360",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:56.361000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.874000 UTC - [Main Thread]: V/nsHttp uri=https://pubads.g.doubleclick.net/pagead/conversion/?ai=BpxJNsgvdW9PpJ4fyvgKy0oywCKP0z61FAAAAEAEg47KzOTgAWI7uj4KDBGDJtr2I9KOcErIBD3d3dy55b3V0dWJlLmNvbboBBzF4MV94bWzIAQXaASlodHRwczovL3d3dy55b3V0dWJlLmNvbS92aWRlby9SSDlrbDZYWml4b8ACAuACAOoCFy80MDYxL2NvbS55dHB3bXB1Lm11c2lj-AKE0h6QA-ADmAPgA6gDAdAEkE7gBAHSBQYQoITvhhKQBgGgBiPYBwHgBxPSCAcIgCEQARgD&sigh=cmzJ9cMGa-c&label=videoplaytime25&ad_mt=4082&acvw=sv%3D676%26cb%3Dj%26e%3D1%26nas%3D1%26sdk%3Dh%26p%3D80,67,619,1025%26tos%3D62,0,0,0,0%26mtos%3D62,62,62,62,62%26mcvt%3D62%26ps%3D1519,1320%26scs%3D1536,864%26bs%3D1519,755%26pt%3D0,0%26vht%3D3464%26mut%3D3457%26a%3D1%26ft%3D0%26dft%3D0%26at%3D3519%26dat%3D3519%26as%3D1%26vpt%3D3519%26gmm%3D4%26efpf%3D2%26nmt%3D0%26tcm%3D1%26bt%3D3%26pst%3D2%26dur%3D15081%26vmtime%3D4082%26dvs%3D62%26dfvs%3D62%26dvpt%3D3519%26is%3D182%26ic%3D438%26cs%3D438%26mc%3D1%26nc%3D1%26mv%3D1%26nv%3D1%26qmt%3D62,62,62,62,62%26qnc%3D1%26qmv%3D1%26qnv%3D1%26lte%3D1%26ces%26tth%3D3465%26avms%3Dgeo%26qi%3D473627514%26psm%3D17%26psv%3D17%26psfv%3D17%26psa%3D17%26ptlt%3D9857%26pngs%3D9,14,15s%26ssb%3D0,0,0,0,0,0,0,3519,0,0,0&gv=atos%3D62,62,62,62,62%26amtos%3D62,62,62,62,62%26avt%3D62%26davs%3D62%26dafvs%3D62%26ss%3D0%26t%3D1541213111297&tpv=c%3D0%26at%3D3519%26atos%3D62,62,62%26a%3D1%26dur%3D15081%26p%3D80,67,619,1025%26tos%3D62,62,62%26j%3Dwww.youtube.com%26mtos%3D62,62,62%26gmm%3D4%26gdr%3D0%26ss%3D0%26vsv%3Dw2%26t%3D1541213111297%26s1%3Dd775d1ef%26h%3D41e0811d\"",
+        "edges": [
+            {
+                "source": "pubads.g.doubleclick.net",
+                "dest": "https://pubads.g.doubleclick.net/pagead/conversion/?ai=BpxJNsgvdW9PpJ4fyvgKy0oywCKP0z61FAAAAEAEg47KzOTgAWI7uj4KDBGDJtr2I9KOcErIBD3d3dy55b3V0dWJlLmNvbboBBzF4MV94bWzIAQXaASlodHRwczovL3d3dy55b3V0dWJlLmNvbS92aWRlby9SSDlrbDZYWml4b8ACAuACAOoCFy80MDYxL2NvbS55dHB3bXB1Lm11c2lj-AKE0h6QA-ADmAPgA6gDAdAEkE7gBAHSBQYQoITvhhKQBgGgBiPYBwHgBxPSCAcIgCEQARgD&sigh=cmzJ9cMGa-c&label=videoplaytime25&ad_mt=4082&acvw=sv%3D676%26cb%3Dj%26e%3D1%26nas%3D1%26sdk%3Dh%26p%3D80,67,619,1025%26tos%3D62,0,0,0,0%26mtos%3D62,62,62,62,62%26mcvt%3D62%26ps%3D1519,1320%26scs%3D1536,864%26bs%3D1519,755%26pt%3D0,0%26vht%3D3464%26mut%3D3457%26a%3D1%26ft%3D0%26dft%3D0%26at%3D3519%26dat%3D3519%26as%3D1%26vpt%3D3519%26gmm%3D4%26efpf%3D2%26nmt%3D0%26tcm%3D1%26bt%3D3%26pst%3D2%26dur%3D15081%26vmtime%3D4082%26dvs%3D62%26dfvs%3D62%26dvpt%3D3519%26is%3D182%26ic%3D438%26cs%3D438%26mc%3D1%26nc%3D1%26mv%3D1%26nv%3D1%26qmt%3D62,62,62,62,62%26qnc%3D1%26qmv%3D1%26qnv%3D1%26lte%3D1%26ces%26tth%3D3465%26avms%3Dgeo%26qi%3D473627514%26psm%3D17%26psv%3D17%26psfv%3D17%26psa%3D17%26ptlt%3D9857%26pngs%3D9,14,15s%26ssb%3D0,0,0,0,0,0,0,3519,0,0,0&gv=atos%3D62,62,62,62,62%26amtos%3D62,62,62,62,62%26avt%3D62%26davs%3D62%26dafvs%3D62%26ss%3D0%26t%3D1541213111297&tpv=c%3D0%26at%3D3519%26atos%3D62,62,62%26a%3D1%26dur%3D15081%26p%3D80,67,619,1025%26tos%3D62,62,62%26j%3Dwww.youtube.com%26mtos%3D62,62,62%26gmm%3D4%26gdr%3D0%26ss%3D0%26vsv%3Dw2%26t%3D1541213111297%26s1%3Dd775d1ef%26h%3D41e0811d",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:14.874000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:50.843000 UTC - [Main Thread]: V/nsHttp uri=https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA\"",
+        "edges": [
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "hosts",
+                "timestamp": "2018-11-03 02:44:50.843000"
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "www.gstatic.com",
+                "Action": "accesses",
+                "timestamp": "2018-11-03 02:44:50.843000"
+            },
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:50.843000"
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:50.843000"
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=drt,def/exm=in,fot/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "www.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:50.843000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.843000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GgoQtoY1DYI2sATWhAySdvwkBPExPUwS8kR6itw-novCFYoEwNclPw]\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcR_GgoQtoY1DYI2sATWhAySdvwkBPExPUwS8kR6itw-novCFYoEwNclPw",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GgoQtoY1DYI2sATWhAySdvwkBPExPUwS8kR6itw-novCFYoEwNclPw",
+                "dest": "images?q=tbn:ANd9GcR_GgoQtoY1DYI2sATWhAySdvwkBPExPUwS8kR6itw-novCFYoEwNclPw",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:02.843000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcR_GgoQtoY1DYI2sATWhAySdvwkBPExPUwS8kR6itw-novCFYoEwNclPw",
+                "Action": "hosts",
+                "timestamp": "2018-11-03 02:45:02.843000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_GgoQtoY1DYI2sATWhAySdvwkBPExPUwS8kR6itw-novCFYoEwNclPw",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "write data into the cache",
+                "timestamp": "2018-11-03 02:45:02.843000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.414000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=nwvdW7PCNpaQjgTJ150Q.1541213088387\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=nwvdW7PCNpaQjgTJ150Q.1541213088387",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.414000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:15.325000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=uwvdW8_IJMLujwSfi7qgBA.1541213115304\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=uwvdW8_IJMLujwSfi7qgBA.1541213115304",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:15.325000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.741000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&rt=wsrt.1495,aft.1792,prt.760\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&rt=wsrt.1495,aft.1792,prt.760",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:14.741000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.497000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=yeah%20yeah&psi=pgvdW6XQNuLLjwTEyY7gDg.1541213095488\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=yeah%20yeah&psi=pgvdW6XQNuLLjwTEyY7gDg.1541213095488",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.497000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:05.086000 UTC - [Main Thread]: D/nsHttp uri=https://www.youtube.com/yts/jsbin/web-animations-next-lite.min-vflqEtsI7/web-animations-next-lite.min.js\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "web-animations-next-lite.min.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:05.086000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "https://www.youtube.com/yts/jsbin/web-animations-next-lite.min-vflqEtsI7/web-animations-next-lite.min.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:05.086000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "web-animations-next-lite.min.js",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.youtube.com/yts/jsbin/web-animations-next-lite.min-vflqEtsI7/web-animations-next-lite.min.js",
+                "dest": "web-animations-next-lite.min.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:05.086000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:43.977000 UTC - [Main Thread]: V/nsHttp uri=https://tiles-cloudfront.cdn.mozilla.net/images/b18c52ee5445fb37ed466d695f7e018efd0ad58f.95655.png\"",
+        "edges": [
+            {
+                "source": "tiles-cloudfront.cdn.mozilla.net",
+                "dest": "b18c52ee5445fb37ed466d695f7e018efd0ad58f.95655.png",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://tiles-cloudfront.cdn.mozilla.net/images/b18c52ee5445fb37ed466d695f7e018efd0ad58f.95655.png",
+                "dest": "tiles-cloudfront.cdn.mozilla.net",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:44:43.977000"
+            },
+            {
+                "source": "https://tiles-cloudfront.cdn.mozilla.net/images/b18c52ee5445fb37ed466d695f7e018efd0ad58f.95655.png",
+                "dest": "b18c52ee5445fb37ed466d695f7e018efd0ad58f.95655.png",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:44:43.977000"
+            },
+            {
+                "source": "tiles-cloudfront.cdn.mozilla.net",
+                "dest": "https://tiles-cloudfront.cdn.mozilla.net/images/b18c52ee5445fb37ed466d695f7e018efd0ad58f.95655.png",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:43.977000"
+            },
+            {
+                "source": "tiles-cloudfront.cdn.mozilla.net",
+                "dest": "b18c52ee5445fb37ed466d695f7e018efd0ad58f.95655.png",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:43.977000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.293000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg]\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "dest": "images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:56.293000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:56.293000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:56.293000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:00.437000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=e030000 uri=https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&vet=10ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ4tUDCAs..h&zx=1541213100368]\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?atyp=i&ei=pgvdW6XQNuLLjwTEyY7gDg&vet=10ahUKEwilu62YmrfeAhXi5YMKHcSkA-wQ4tUDCAs..h&zx=1541213100368",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:00.437000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:00.437000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "hosts",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.624000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAuZYR09Ftp4KoavQD3o37l2F0Uzfwh5VA9PDDE6ceG678vsNZUk7Zw]\"",
+        "edges": [
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAuZYR09Ftp4KoavQD3o37l2F0Uzfwh5VA9PDDE6ceG678vsNZUk7Zw",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAuZYR09Ftp4KoavQD3o37l2F0Uzfwh5VA9PDDE6ceG678vsNZUk7Zw",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:56.624000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAuZYR09Ftp4KoavQD3o37l2F0Uzfwh5VA9PDDE6ceG678vsNZUk7Zw",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAuZYR09Ftp4KoavQD3o37l2F0Uzfwh5VA9PDDE6ceG678vsNZUk7Zw",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAuZYR09Ftp4KoavQD3o37l2F0Uzfwh5VA9PDDE6ceG678vsNZUk7Zw",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCAuZYR09Ftp4KoavQD3o37l2F0Uzfwh5VA9PDDE6ceG678vsNZUk7Zw",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:56.624000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.324000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhu3co5qfOdnc9VSh2RfDVSz8RTl6WJr_KKdwO3xAdi8ewgtu7UTJC7Q]\"",
+        "edges": [
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhu3co5qfOdnc9VSh2RfDVSz8RTl6WJr_KKdwO3xAdi8ewgtu7UTJC7Q",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:56.324000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcQhu3co5qfOdnc9VSh2RfDVSz8RTl6WJr_KKdwO3xAdi8ewgtu7UTJC7Q",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:44:56.324000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.772000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2dd5b0 uri=https://apis.google.com/js/api.js]\"",
+        "edges": [
+            {
+                "source": "HttpChannelParent",
+                "dest": "nsHttp",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.772000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "api.js",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://apis.google.com/js/api.js",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.772000"
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "https://apis.google.com/js/api.js",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.772000"
+            },
+            {
+                "source": "a2dd5b0",
+                "dest": "https://apis.google.com/js/api.js",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.772000"
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "api.js",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.772000"
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "apis.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:20.772000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.671000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=b13a5e0 uri=https://www.google.com/gen_204?atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&s=web&t=all&imn=27&adh=&ima=3&ime=1&imeb=10&imeo=0&wh=755&scp=0&fld=1777.11669921875&sys=hc.4&rt=aft.786,dcl.955,iml.790,ol.2341,prt.739,xjs.1157,xjsee.1156,xjses.1029,xjsls.916,sct.658,wsrt.208,cst.0,dnst.1,rqst.1022,rspt.883,rqstt.44,unt.7,cstt.9,dit.1120&zx=1541213096671]\"",
+        "edges": [
+            {
+                "source": "RecvAsyncOpen",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&s=web&t=all&imn=27&adh=&ima=3&ime=1&imeb=10&imeo=0&wh=755&scp=0&fld=1777.11669921875&sys=hc.4&rt=aft.786,dcl.955,iml.790,ol.2341,prt.739,xjs.1157,xjsee.1156,xjses.1029,xjsls.916,sct.658,wsrt.208,cst.0,dnst.1,rqst.1022,rspt.883,rqstt.44,unt.7,cstt.9,dit.1120&zx=1541213096671",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:56.671000"
+            },
+            {
+                "source": "RecvAsyncOpen",
+                "dest": "b13a5e0",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:56.671000"
+            },
+            {
+                "source": "RecvAsyncOpen",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&s=web&t=all&imn=27&adh=&ima=3&ime=1&imeb=10&imeo=0&wh=755&scp=0&fld=1777.11669921875&sys=hc.4&rt=aft.786,dcl.955,iml.790,ol.2341,prt.739,xjs.1157,xjsee.1156,xjses.1029,xjsls.916,sct.658,wsrt.208,cst.0,dnst.1,rqst.1022,rspt.883,rqstt.44,unt.7,cstt.9,dit.1120&zx=1541213096671",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:56.671000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.936000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=1593df50 uri=https://adservice.google.com/adsid/google/ui]\"",
+        "edges": [
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "https://adservice.google.com/adsid/google/ui",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.936000"
+            },
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "1593df50",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.936000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.321000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=b4ed500 uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3rMiS7qB8Lb85sYM3WoPCp9VMaI5G_-PiPKVxBGx3Yok1JUf3R5dXRQ]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3rMiS7qB8Lb85sYM3WoPCp9VMaI5G_-PiPKVxBGx3Yok1JUf3R5dXRQ",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.321000"
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "images?q=tbn:ANd9GcQ3rMiS7qB8Lb85sYM3WoPCp9VMaI5G_-PiPKVxBGx3Yok1JUf3R5dXRQ",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.321000"
+            },
+            {
+                "source": "images?q=tbn:ANd9GcQ3rMiS7qB8Lb85sYM3WoPCp9VMaI5G_-PiPKVxBGx3Yok1JUf3R5dXRQ",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.321000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "HttpChannelParent",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.321000"
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3rMiS7qB8Lb85sYM3WoPCp9VMaI5G_-PiPKVxBGx3Yok1JUf3R5dXRQ",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.321000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcQ3rMiS7qB8Lb85sYM3WoPCp9VMaI5G_-PiPKVxBGx3Yok1JUf3R5dXRQ",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "b4ed500",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3rMiS7qB8Lb85sYM3WoPCp9VMaI5G_-PiPKVxBGx3Yok1JUf3R5dXRQ",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.321000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.597000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.google.com/async/bgasy?ei=rQvdW9WFCoq3jwT1uZGwDA&hl=en&yv=3&async=_fmt:jspb]\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/async/bgasy?ei=rQvdW9WFCoq3jwT1uZGwDA&hl=en&yv=3&async=_fmt:jspb",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:02.597000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.442000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=15a41000 uri=https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365]\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "dest": "gen_204",
+                "Action": "subsequent get",
+                "timestamp": "2018-11-03 02:44:48.442000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "dest": "www.google.com",
+                "Action": "web request",
+                "timestamp": "2018-11-03 02:44:48.442000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "15a41000",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:48.442000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "Action": "maybe invalidates",
+                "timestamp": "2018-11-03 02:44:48.442000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "dest": "gen_204",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:48.442000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:48.442000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "dest": "www.google.com",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:48.442000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.367000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=jsa&jsi=s,t.0,et.focus,n.iDPoPb,cn.1&zx=1541213088365",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.367000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.367000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.393000 UTC - [Main Thread]: V/nsHttp uri=http://ocsp.pki.goog/GTSGIAG3\"",
+        "edges": [
+            {
+                "source": "http://ocsp.pki.goog/GTSGIAG3",
+                "dest": "ocsp.pki.goog",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.393000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.605000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=177a1cc0 uri=https://www.google.com/gen_204?atyp=i&ei=ogvdW7TnBaPgjwSsiaXIDw&vet=10ahUKEwi0wIiWmrfeAhUj8IMKHaxECfkQ4tUDCAs..s&zx=1541213091604]\"",
+        "edges": [
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "https://www.google.com/gen_204?atyp=i&ei=ogvdW7TnBaPgjwSsiaXIDw&vet=10ahUKEwi0wIiWmrfeAhUj8IMKHaxECfkQ4tUDCAs..s&zx=1541213091604",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:51.605000"
+            },
+            {
+                "source": "gen_204",
+                "dest": "www.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:51.605000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "hosted",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:06.470000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2ddb30 uri=https://www.youtube.com/get_video_info?html5=1&video_id=x5F6pCyLL8c&cpn=M8oDgh-1PVxZdif2&eurl&ps=desktop-polymer&el=adunit&hl=en_GB&sts=17836&lact=544&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&adformat=1_2&break_type=1&ad_id=4846240288&ad_sys=GDFP&iv_load_policy=1&autoplay=1&width=958&height=539&content_v=RH9kl6XZixo&authuser=0&ei=sAvdW6fTK8GpjQTc3oL4BQ]\"",
+        "edges": [
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/get_video_info?html5=1&video_id=x5F6pCyLL8c&cpn=M8oDgh-1PVxZdif2&eurl&ps=desktop-polymer&el=adunit&hl=en_GB&sts=17836&lact=544&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&adformat=1_2&break_type=1&ad_id=4846240288&ad_sys=GDFP&iv_load_policy=1&autoplay=1&width=958&height=539&content_v=RH9kl6XZixo&authuser=0&ei=sAvdW6fTK8GpjQTc3oL4BQ",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:06.470000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:56.741000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=15a50000 uri=https://www.google.com/gen_204?atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&s=web&t=all&imn=27&adh=&ima=3&ime=1&imeb=10&imeo=0&wh=755&scp=0&fld=1777.11669921875&sys=hc.4&rt=aft.786,dcl.955,iml.790,ol.2341,prt.739,xjs.1157,xjsee.1156,xjses.1029,xjsls.916,sct.658,wsrt.208,cst.0,dnst.1,rqst.1022,rspt.883,rqstt.44,unt.7,cstt.9,dit.1120&zx=1541213096671]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&s=web&t=all&imn=27&adh=&ima=3&ime=1&imeb=10&imeo=0&wh=755&scp=0&fld=1777.11669921875&sys=hc.4&rt=aft.786,dcl.955,iml.790,ol.2341,prt.739,xjs.1157,xjsee.1156,xjses.1029,xjsls.916,sct.658,wsrt.208,cst.0,dnst.1,rqst.1022,rspt.883,rqstt.44,unt.7,cstt.9,dit.1120&zx=1541213096671",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:56.741000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.148000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.google.com/gen_204?atyp=i&zx=1541213120030&ei=uwvdW8_IJMLujwSfi7qgBA&ogf=.40.&ogrp=&ogv=219063765.0&ogd=&ogc=USA&ogl=en&oggv=es_plusone_gc_20181027.0_p0&oge=5&ogex=40400&ogp=1&ogsr=1&ogus=1]\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?atyp=i&zx=1541213120030&ei=uwvdW8_IJMLujwSfi7qgBA&ogf=.40.&ogrp=&ogv=219063765.0&ogd=&ogc=USA&ogl=en&oggv=es_plusone_gc_20181027.0_p0&oge=5&ogex=40400&ogp=1&ogsr=1&ogus=1",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:20.148000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.414000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=e35cb30 uri=https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=nwvdW7PCNpaQjgTJ150Q.1541213088387]\"",
+        "edges": [
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:48.414000"
+            },
+            {
+                "source": "ID-2",
+                "dest": "ID-3",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:48.414000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:54.107000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?atyp=i&ei=ogvdW7TnBaPgjwSsiaXIDw&vet=10ahUKEwi0wIiWmrfeAhUj8IMKHaxECfkQ4tUDCAs..h&zx=1541213094107\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?atyp=i&ei=ogvdW7TnBaPgjwSsiaXIDw&vet=10ahUKEwi0wIiWmrfeAhUj8IMKHaxECfkQ4tUDCAs..h&zx=1541213094107",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:44:54.107000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:47.118000 UTC - [Main Thread]: D/nsHttp uri=http://ocsp.pki.goog/GTSGIAG3\"",
+        "edges": [
+            {
+                "source": "http://ocsp.pki.goog/GTSGIAG3",
+                "dest": "http://ocsp.pki.goog/GTSGIAG3",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:47.118000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.651000 UTC - [Main Thread]: V/nsHttp uri=http://ocsp.pki.goog/GTSGIAG3\"",
+        "edges": [
+            {
+                "source": "http://ocsp.pki.goog/GTSGIAG3",
+                "dest": "http://ocsp.pki.goog/GTSGIAG3",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.651000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.113000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=177a9ab0 uri=https://www.google.com/async/bgasy?ei=ogvdW7TnBaPgjwSsiaXIDw&hl=en&yv=3&async=_fmt:jspb]\"",
+        "edges": [
+            {
+                "source": "Main Thread",
+                "dest": "https://www.google.com/async/bgasy?ei=ogvdW7TnBaPgjwSsiaXIDw&hl=en&yv=3&async=_fmt:jspb",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:51.113000"
+            },
+            {
+                "source": "https://www.google.com/async/bgasy?ei=ogvdW7TnBaPgjwSsiaXIDw&hl=en&yv=3&async=_fmt:jspb",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.113000"
+            },
+            {
+                "source": "Main Thread",
+                "dest": "www.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:51.113000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.547000 UTC - [Main Thread]: V/nsHttp uri=https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0\"",
+        "edges": [
+            {
+                "source": "apis.google.com",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:44:55.547000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:44:55.547000"
+            },
+            {
+                "source": "apis.google.com",
+                "dest": "gapi.gapi.en.CUp85wbT4DI.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.547000"
+            },
+            {
+                "source": "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.gapi.en.CUp85wbT4DI.O/m=gapi_iframes,googleapis_client,plusone/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-XBQda2DFvo9hxbj_dGnCV84SJMA/cb=gapi.loaded_0",
+                "dest": "apis.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.547000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.343000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=15f39ed0 uri=https://www.google.com/async/bgasy?ei=rQvdW9WFCoq3jwT1uZGwDA&hl=en&yv=3&async=_fmt:jspb]\"",
+        "edges": [
+            {
+                "source": "Main Thread",
+                "dest": "https://www.google.com/async/bgasy?ei=rQvdW9WFCoq3jwT1uZGwDA&hl=en&yv=3&async=_fmt:jspb",
+                "Action": "referer",
+                "timestamp": "2018-11-03 02:45:02.343000"
+            },
+            {
+                "source": "Main Thread",
+                "dest": "www.google.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:02.343000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/async/bgasy?ei=rQvdW9WFCoq3jwT1uZGwDA&hl=en&yv=3&async=_fmt:jspb",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.343000"
+            },
+            {
+                "source": "Main Thread",
+                "dest": "https://www.google.com/async/bgasy?ei=rQvdW9WFCoq3jwT1uZGwDA&hl=en&yv=3&async=_fmt:jspb",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.343000"
+            },
+            {
+                "source": "https://www.google.com/async/bgasy?ei=rQvdW9WFCoq3jwT1uZGwDA&hl=en&yv=3&async=_fmt:jspb",
+                "dest": "www.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.343000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.112000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&rt=wsrt.208,aft.786,prt.739,sct.658\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&rt=wsrt.208,aft.786,prt.739,sct.658",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.112000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:50.838000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=1593c950 uri=https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823]\"",
+        "edges": [
+            {
+                "source": "HttpChannelParent",
+                "dest": "nsHttp",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:50.838000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "complete/search",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:50.838000"
+            },
+            {
+                "source": "complete/search",
+                "dest": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:50.838000"
+            },
+            {
+                "source": "1593c950",
+                "dest": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:50.838000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:50.838000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "www.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:50.838000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "complete/search",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:50.838000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:01.760000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=16c1f000 uri=https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&rt=wsrt.211,aft.764,prt.552,sct.477]\"",
+        "edges": [
+            {
+                "source": "16c1f000",
+                "dest": "https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&rt=wsrt.211,aft.764,prt.552,sct.477",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:01.760000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=rQvdW9WFCoq3jwT1uZGwDA&rt=wsrt.211,aft.764,prt.552,sct.477",
+                "dest": "www.google.com",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:01.760000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:13.329000 UTC - [Main Thread]: D/nsHttp uri=https://ssl.gstatic.com/gb/images/i2_2ec824b0.png\"",
+        "edges": [
+            {
+                "source": "ssl.gstatic.com",
+                "dest": "i2_2ec824b0.png",
+                "Action": "hosted",
+                "timestamp": "2018-11-03 02:45:13.329000"
+            },
+            {
+                "source": "https://ssl.gstatic.com/gb/images/i2_2ec824b0.png",
+                "dest": "ssl.gstatic.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:13.329000"
+            },
+            {
+                "source": "https://ssl.gstatic.com/gb/images/i2_2ec824b0.png",
+                "dest": "i2_2ec824b0.png",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:13.329000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.014000 UTC - [Main Thread]: D/nsHttp uri=https://clients5.google.com/pagead/drt/dn/dn.js\"",
+        "edges": [
+            {
+                "source": "clients5.google.com",
+                "dest": "dn.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.014000"
+            },
+            {
+                "source": "clients5.google.com",
+                "dest": "https://clients5.google.com/pagead/drt/dn/dn.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.014000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:54.180000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=d413000 uri=https://www.google.com/gen_204?atyp=i&ei=ogvdW7TnBaPgjwSsiaXIDw&vet=10ahUKEwi0wIiWmrfeAhUj8IMKHaxECfkQ4tUDCAs..h&zx=1541213094107]\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=i&ei=ogvdW7TnBaPgjwSsiaXIDw&vet=10ahUKEwi0wIiWmrfeAhUj8IMKHaxECfkQ4tUDCAs..h&zx=1541213094107",
+                "dest": "https://www.google.com",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:54.180000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.400000 UTC - [Main Thread]: D/nsHttp uri=https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=nwvdW7PCNpaQjgTJ150Q.1541213088387\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=nwvdW7PCNpaQjgTJ150Q.1541213088387",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.400000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.564000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=e1f0480 uri=https://clients5.google.com/pagead/drt/dn/]\"",
+        "edges": [
+            {
+                "source": "https://clients5.google.com/pagead/drt/dn/",
+                "dest": "clients5.google.com",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "e1f0480",
+                "dest": "Main Thread",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.564000"
+            },
+            {
+                "source": "Main Thread",
+                "dest": "https://clients5.google.com/pagead/drt/dn/",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.564000"
+            },
+            {
+                "source": "https://clients5.google.com/pagead/drt/dn/",
+                "dest": "clients5.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.564000"
+            },
+            {
+                "source": "e1f0480",
+                "dest": "https://clients5.google.com/pagead/drt/dn/",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.564000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:15.099000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2ddf50 uri=https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&rt=wsrt.261,aft.96,prt.96]\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&rt=wsrt.261,aft.96,prt.96",
+                "dest": "gen_204",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:15.099000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&rt=wsrt.261,aft.96,prt.96",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:15.099000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&rt=wsrt.261,aft.96,prt.96",
+                "dest": "nsHttp",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:15.099000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&rt=wsrt.261,aft.96,prt.96",
+                "dest": "www.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:15.099000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?s=webhp&t=aft&atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&rt=wsrt.261,aft.96,prt.96",
+                "dest": "gen_204",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:15.099000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.563000 UTC - [Main Thread]: V/nsHttp uri=https://clients5.google.com/pagead/drt/dn/dn.js\"",
+        "edges": [
+            {
+                "source": "clients5.google.com",
+                "dest": "dn.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.563000"
+            },
+            {
+                "source": "clients5.google.com",
+                "dest": "https://clients5.google.com/pagead/drt/dn/dn.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.563000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:20.481000 UTC - [Main Thread]: D/nsHttp uri=https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=OJUrvb,_b,_tp,wmwg8b/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=CyO4we,EFQ78c,F3ZVPc,G4es5d,GkRiKb,IZT63,L1AAkb,LUjVKc,LbJKvc,MI6k7c,MJAy1b,MdUzUe,NtGY3c,O6y8ed,PrPYRd,RQErad,SdcwHb,SpsfSb,Uas9Hd,WO9ee,XAzchc,XVMNvd,XbSRYb,aW3pY,azoZEe,bvGsFe,dodICd,e5qFLc,hKSk3e,hc6Ubd,iWP1Yb,kjKdXe,lwddkf,mI3LFb,mdR7q,o02Jie,o7nxec,wI7Sfc,ws9Tlc,zbML3c\"",
+        "edges": [
+            {
+                "source": "https://notifications.google.com/_/scs/social-static/_/js/k=boq.NotificationsOgbUi.en.SFCeVIdDmgU.O/ck=boq.NotificationsOgbUi.rgxKYWHcL_I.L.F4.O/am=AAAAIAAAAAAE/rt=j/d=1/exm=OJUrvb,_b,_tp,wmwg8b/excm=home,_b,_tp/ed=1/rs=AGLTcCPN4ZGNtA-PpjJTzJdF7iPPSObpBQ/m=CyO4we,EFQ78c,F3ZVPc,G4es5d,GkRiKb,IZT63,L1AAkb,LUjVKc,LbJKvc,MI6k7c,MJAy1b,MdUzUe,NtGY3c,O6y8ed,PrPYRd,RQErad,SdcwHb,SpsfSb,Uas9Hd,WO9ee,XAzchc,XVMNvd,XbSRYb,aW3pY,azoZEe,bvGsFe,dodICd,e5qFLc,hKSk3e,hc6Ubd,iWP1Yb,kjKdXe,lwddkf,mI3LFb,mdR7q,o02Jie,o7nxec,wI7Sfc,ws9Tlc,zbML3c",
+                "dest": "notifications.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:20.481000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.747000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/",
+                "dest": "https://www.google.com/",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:14.747000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.290000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=1180b000 uri=https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&rt=wsrt.208,aft.786,prt.739,sct.658]\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&rt=wsrt.208,aft.786,prt.739,sct.658",
+                "dest": "www.google.com",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:55.290000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?s=web&t=aft&atyp=csi&ei=pgvdW6XQNuLLjwTEyY7gDg&rt=wsrt.208,aft.786,prt.739,sct.658",
+                "dest": "1180b000",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:55.290000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.963000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=16c1f000 uri=https://ogs.google.com/u/0/_/notifications/count]\"",
+        "edges": [
+            {
+                "source": "https://ogs.google.com/u/0/_/notifications/count",
+                "dest": "ogs.google.com",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:02.963000"
+            },
+            {
+                "source": "16c1f000",
+                "dest": "https://ogs.google.com/u/0/_/notifications/count",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:02.963000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:05.680000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=15b7c480 uri=https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/ux.js]\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "ux.js",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/ux.js",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:05.680000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:15.599000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.google.com/gen_204?atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.96,dcl.111,iml.96,ol.510,prt.96,xjs.337,xjsee.336,xjses.178,xjsls.69,wsrt.261,cst.0,dnst.8,rqst.231,rspt.92,rqstt.98,unt.14,cstt.26,dit.363&zx=1541213115513]\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=uwvdW8_IJMLujwSfi7qgBA&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.96,dcl.111,iml.96,ol.510,prt.96,xjs.337,xjsee.336,xjses.178,xjsls.69,wsrt.261,cst.0,dnst.8,rqst.231,rspt.92,rqstt.98,unt.14,cstt.26,dit.363&zx=1541213115513",
+                "dest": "https://www.google.com",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:15.599000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:14.804000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2dc530 uri=https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "HttpChannelParent",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:14.804000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "gen_204",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:14.804000"
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:14.804000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804",
+                "dest": "www.google.com",
+                "Action": "refers",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804",
+                "dest": "gen_204",
+                "Action": "refers",
+                "timestamp": "..."
+            },
+            {
+                "source": "HttpChannelParent",
+                "dest": "gen_204",
+                "Action": "receives",
+                "timestamp": "2018-11-03 02:45:14.804000"
+            },
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=uQvdW4P5F6fojgSapanACQ&s=webhp&t=all&imn=3&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.1792,dcl.765,iml.1792,ol.1849,prt.760,xjs.1574,xjsee.1574,xjses.1470,xjsls.397,wsrt.1495,cst.130,dnst.223,rqst.1154,rspt.794,rqstt.1084,unt.5,cstt.230,dit.2260&zx=1541213114804",
+                "dest": "www.google.com",
+                "Action": "web request",
+                "timestamp": "2018-11-03 02:45:14.804000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.568000 UTC - [Main Thread]: D/nsHttp uri=https://clients5.google.com/pagead/drt/dn/\"",
+        "edges": [
+            {
+                "source": "https://clients5.google.com/pagead/drt/dn/",
+                "dest": "clients5.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.568000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:19.507000 UTC - [Main Thread]: D/nsHttp uri=https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=lat/exm=in,fot,drt,def/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA\"",
+        "edges": [
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=lat/exm=in,fot,drt,def/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "www.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:19.507000"
+            },
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:19.507000"
+            },
+            {
+                "source": "www.gstatic.com",
+                "dest": "og.og2.en_US.JVz6SCntxCY.O",
+                "Action": "served",
+                "timestamp": "2018-11-03 02:45:19.507000"
+            },
+            {
+                "source": "https://www.gstatic.com/og/_/js/k=og.og2.en_US.JVz6SCntxCY.O/rt=j/m=lat/exm=in,fot,drt,def/d=1/ed=1/rs=AA2YrTtFxushVjSIq_U0u8lrJdLS3YMVOA",
+                "dest": "www.gstatic.com",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:19.507000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:11.455000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:11.455000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:53.588000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/complete/search?q=yeah%20y&cp=6&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "https://www.google.com/complete/search?q=yeah%20y&cp=6&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&pq=Day%20of%20the%20Dead&psi=ogvdW7TnBaPgjwSsiaXIDw.1541213090823",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:53.588000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:07.911000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.youtube.com/get_video_info?html5=1&video_id=x5F6pCyLL8c&cpn=M8oDgh-1PVxZdif2&eurl&ps=desktop-polymer&el=adunit&hl=en_GB&sts=17836&lact=544&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&adformat=1_2&break_type=1&ad_id=4846240288&ad_sys=GDFP&iv_load_policy=1&autoplay=1&width=958&height=539&content_v=RH9kl6XZixo&authuser=0&ei=sAvdW6fTK8GpjQTc3oL4BQ]\"",
+        "edges": [
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/get_video_info?html5=1&video_id=x5F6pCyLL8c&cpn=M8oDgh-1PVxZdif2&eurl&ps=desktop-polymer&el=adunit&hl=en_GB&sts=17836&lact=544&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&adformat=1_2&break_type=1&ad_id=4846240288&ad_sys=GDFP&iv_load_policy=1&autoplay=1&width=958&height=539&content_v=RH9kl6XZixo&authuser=0&ei=sAvdW6fTK8GpjQTc3oL4BQ",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:07.911000"
+            },
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/get_video_info?html5=1&video_id=x5F6pCyLL8c&cpn=M8oDgh-1PVxZdif2&eurl&ps=desktop-polymer&el=adunit&hl=en_GB&sts=17836&lact=544&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&adformat=1_2&break_type=1&ad_id=4846240288&ad_sys=GDFP&iv_load_policy=1&autoplay=1&width=958&height=539&content_v=RH9kl6XZixo&authuser=0&ei=sAvdW6fTK8GpjQTc3oL4BQ",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:07.911000"
+            },
+            {
+                "source": "https://www.youtube.com/get_video_info?html5=1&video_id=x5F6pCyLL8c&cpn=M8oDgh-1PVxZdif2&eurl&ps=desktop-polymer&el=adunit&hl=en_GB&sts=17836&lact=544&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&adformat=1_2&break_type=1&ad_id=4846240288&ad_sys=GDFP&iv_load_policy=1&autoplay=1&width=958&height=539&content_v=RH9kl6XZixo&authuser=0&ei=sAvdW6fTK8GpjQTc3oL4BQ",
+                "dest": "www.youtube.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:07.911000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:17.989000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.youtube.com/api/stats/watchtime?ns=yt&el=adunit&cpn=M8oDgh-1PVxZdif2&docid=x5F6pCyLL8c&ver=2&referrer=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRH9kl6XZixo&cmt=7.056&plid=AAV5uaPXkeWlfLU9&ei=tAvdW7D-CISMDt6Nq5gK&fmt=247&fs=0&rt=11.387&of=GC6OCn1lTVgpgJyrp2hYjw&adformat=1_2&content_v=RH9kl6XZixo&euri&lact=6237&cl=219577728&state=paused&vm=CAIQABgE&volume=100&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&autoplay=1&final=1&hl=en_GB&cr=US&uga=m31&len=15.081&afmt=251&idpj=-5&ldpj=-35&muted=0&st=5.711&et=7.056&vis=3]\"",
+        "edges": [
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=adunit&cpn=M8oDgh-1PVxZdif2&docid=x5F6pCyLL8c&ver=2&referrer=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRH9kl6XZixo&cmt=7.056&plid=AAV5uaPXkeWlfLU9&ei=tAvdW7D-CISMDt6Nq5gK&fmt=247&fs=0&rt=11.387&of=GC6OCn1lTVgpgJyrp2hYjw&adformat=1_2&content_v=RH9kl6XZixo&euri&lact=6237&cl=219577728&state=paused&vm=CAIQABgE&volume=100&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&autoplay=1&final=1&hl=en_GB&cr=US&uga=m31&len=15.081&afmt=251&idpj=-5&ldpj=-35&muted=0&st=5.711&et=7.056&vis=3",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:17.989000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "api/stats/watchtime",
+                "Action": "serves",
+                "timestamp": "..."
+            },
+            {
+                "source": "Windows",
+                "dest": "Firefox",
+                "Action": "runs",
+                "timestamp": "2018-11-03 02:45:17.989000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "api/stats/watchtime",
+                "Action": "serves",
+                "timestamp": "2018-11-03 02:45:17.989000"
+            },
+            {
+                "source": "api/stats/watchtime",
+                "dest": "https://www.youtube.com/api/stats/watchtime?ns=yt&el=adunit&cpn=M8oDgh-1PVxZdif2&docid=x5F6pCyLL8c&ver=2&referrer=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRH9kl6XZixo&cmt=7.056&plid=AAV5uaPXkeWlfLU9&ei=tAvdW7D-CISMDt6Nq5gK&fmt=247&fs=0&rt=11.387&of=GC6OCn1lTVgpgJyrp2hYjw&adformat=1_2&content_v=RH9kl6XZixo&euri&lact=6237&cl=219577728&state=paused&vm=CAIQABgE&volume=100&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&autoplay=1&final=1&hl=en_GB&cr=US&uga=m31&len=15.081&afmt=251&idpj=-5&ldpj=-35&muted=0&st=5.711&et=7.056&vis=3",
+                "Action": "as part of",
+                "timestamp": "2018-11-03 02:45:17.989000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.625000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=1593ce20 uri=https://clients5.google.com/pagead/drt/dn/dn.js]\"",
+        "edges": [
+            {
+                "source": "Main Thread",
+                "dest": "clients5.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.625000"
+            },
+            {
+                "source": "https://clients5.google.com/pagead/drt/dn/dn.js",
+                "dest": "clients5.google.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:02.625000"
+            },
+            {
+                "source": "clients5.google.com",
+                "dest": "https://clients5.google.com/pagead/drt/dn/dn.js",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "clients5.google.com",
+                "dest": "dn.js",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://clients5.google.com/pagead/drt/dn/dn.js",
+                "dest": "dn.js",
+                "Action": "was accessed",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:02.937000 UTC - [Main Thread]: D/nsHttp uri=https://adservice.google.com/adsid/google/ui\"",
+        "edges": [
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:02.937000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.711000 UTC - [Main Thread]: D/nsHttp uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1P1atSPbf2ySkVR1VekCr02Dv6xFLIkWtpIpRYTVx5CouvLIFqMxw4A\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcS1P1atSPbf2ySkVR1VekCr02Dv6xFLIkWtpIpRYTVx5CouvLIFqMxw4A",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.711000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1P1atSPbf2ySkVR1VekCr02Dv6xFLIkWtpIpRYTVx5CouvLIFqMxw4A",
+                "dest": "images?q=tbn:ANd9GcS1P1atSPbf2ySkVR1VekCr02Dv6xFLIkWtpIpRYTVx5CouvLIFqMxw4A",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.711000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1P1atSPbf2ySkVR1VekCr02Dv6xFLIkWtpIpRYTVx5CouvLIFqMxw4A",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.711000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcS1P1atSPbf2ySkVR1VekCr02Dv6xFLIkWtpIpRYTVx5CouvLIFqMxw4A",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.711000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1P1atSPbf2ySkVR1VekCr02Dv6xFLIkWtpIpRYTVx5CouvLIFqMxw4A",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.711000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:55.686000 UTC - [Main Thread]: V/nsHttp uri=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg\"",
+        "edges": [
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.686000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.686000"
+            },
+            {
+                "source": "encrypted-tbn0.gstatic.com",
+                "dest": "images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.686000"
+            },
+            {
+                "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz0pA3L4hyipZGDIf1mzprF9yf--i31hyROMKRrMrMI6UC6eka1cctvg",
+                "dest": "encrypted-tbn0.gstatic.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:55.686000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:13.723000 UTC - [Main Thread]: V/nsHttp uri=https://www.google.com/images/nav_logo242.png\"",
+        "edges": [
+            {
+                "source": "www.google.com",
+                "dest": "nav_logo242.png",
+                "Action": "hosts",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.google.com/images/nav_logo242.png",
+                "dest": "www.google.com",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:13.723000"
+            },
+            {
+                "source": "www.google.com",
+                "dest": "nav_logo242.png",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:13.723000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:15.048000 UTC - [Main Thread]: V/nsHttp uri=https://i.ytimg.com/vi/yvHYWD29ZNY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB6NfCsBIkp836EUW-29oKvq79lIg\"",
+        "edges": [
+            {
+                "source": "i.ytimg.com",
+                "dest": "https://i.ytimg.com/vi/yvHYWD29ZNY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB6NfCsBIkp836EUW-29oKvq79lIg",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:15.048000"
+            },
+            {
+                "source": "i.ytimg.com",
+                "dest": "hqdefault.jpg",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:15.048000"
+            },
+            {
+                "source": "https://i.ytimg.com/vi/yvHYWD29ZNY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB6NfCsBIkp836EUW-29oKvq79lIg",
+                "dest": "hqdefault.jpg",
+                "Action": "V/nsHttp",
+                "timestamp": "2018-11-03 02:45:15.048000"
+            },
+            {
+                "source": "https://i.ytimg.com/vi/yvHYWD29ZNY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLB6NfCsBIkp836EUW-29oKvq79lIg",
+                "dest": "i.ytimg.com",
+                "Action": "accessed",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:15.679000 UTC - [Main Thread]: D/nsHttp Preparing to write data into the cache [uri=https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=-bPKY9ZXrMYxMmZ7&ei=sAvdW6fTK8GpjQTc3oL4BQ&el=detailpage&docid=RH9kl6XZixo&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&seq=2&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&ctmp=loudness:1.741&cmt=0.809:0.000,10.001:0.000&vps=0.809:SU&bwm=10.001:1473195:5.788&bwe=10.001:740673&vis=10.001:3&bh=10.001:0.000]\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=-bPKY9ZXrMYxMmZ7&ei=sAvdW6fTK8GpjQTc3oL4BQ&el=detailpage&docid=RH9kl6XZixo&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&seq=2&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&ctmp=loudness:1.741&cmt=0.809:0.000,10.001:0.000&vps=0.809:SU&bwm=10.001:1473195:5.788&bwe=10.001:740673&vis=10.001:3&bh=10.001:0.000",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:15.679000"
+            },
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=-bPKY9ZXrMYxMmZ7&ei=sAvdW6fTK8GpjQTc3oL4BQ&el=detailpage&docid=RH9kl6XZixo&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&seq=2&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&ctmp=loudness:1.741&cmt=0.809:0.000,10.001:0.000&vps=0.809:SU&bwm=10.001:1473195:5.788&bwe=10.001:740673&vis=10.001:3&bh=10.001:0.000",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:15.679000"
+            },
+            {
+                "source": "Firefox",
+                "dest": "https://www.youtube.com/api/stats/qoe?event=streamingstats&fmt=247&afmt=251&cpn=-bPKY9ZXrMYxMmZ7&ei=sAvdW6fTK8GpjQTc3oL4BQ&el=detailpage&docid=RH9kl6XZixo&ns=yt&fexp=23710476%2C23720702%2C23721698%2C23721898%2C23722414%2C23733013%2C23744176%2C23751767%2C23752869%2C23755886%2C23755898%2C23756192%2C23757412%2C23762650%2C23762813%2C23763106%2C23763126%2C23764134%2C23765548%2C23766195%2C23767581%2C23768219%2C23768325%2C23768549%2C23769362%2C23769830%2C23770138%2C23770774%2C23770868%2C23772347%2C23774642%2C23775676%2C9449243%2C9462705%2C9471239%2C9485000%2C9486863%2C9488572&cl=219577728&seq=2&c=WEB&cver=2.20181101&cplayer=UNIPLAYER&cbr=Firefox&cbrver=52.0&cos=Windows&cosver=6.1&ctmp=loudness:1.741&cmt=0.809:0.000,10.001:0.000&vps=0.809:SU&bwm=10.001:1473195:5.788&bwe=10.001:740673&vis=10.001:3&bh=10.001:0.000",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:15.679000"
+            },
+            {
+                "source": "Firefox",
+                "dest": "www.youtube.com",
+                "Action": "Preparing to write data into the cache",
+                "timestamp": "2018-11-03 02:45:15.679000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:17.992000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2dc7f0 uri=https://www.youtube.com/csi_204?v=2&s=youtube&action=watch&yt_sts=n&tcrc=578&tcrt=95.219482421875&st=758&yt_lt=cold&pc=1&docid=x5F6pCyLL8c&ei=tAvdW7D-CISMDt6Nq5gK&cpn=M8oDgh-1PVxZdif2&fmt=247&cmt=0.491&ad_allowed=&ad_at=0&yt_pvis=1&yt_pt=html5&yt_ad=1&yt_ad_pr=1&GetPlayer_rid=0xd1ef3213743d7dee&c=WEB&cver=2.20181101&yt_li=1&GetWatchNext_rid=0xd1ef3213743d7dee&is_nav=1&csn=sAvdW6fTK8GpjQTc3oL4BQ&p=h2&t=tcp&yt_vis=1&rc=&psc=1&ap=1&yt_fss=u&rt=lpcs.167,lpcf.168,pe.1103,csl.1104,bs.1146,bc.1147,cfg.1148,fs.1209,qoes.2529,ai.1744,nc_pj.1745,rsbe_dph.2010,rsae_dph.2059,rsbe_dpj.2059,vir.2532,rses_dpj.3582,cr_s.3693,cr_c.3903,rsef_dpj.3904,rsae_dpj.3905,ac.3906,apr.3906,gcc.3907,pdc.3909,apa_b.3922,apa_a.3922,pdr.3994,pr.4197,virc.4536,pbr.4560,gv.4556,dl.4765,l2s.4783,fvb.4634,adl.4909,vr.7436,msa.4738,ada.4740,vda.4745,vri.4553,vdns.4555,vreq.4578,vrc.4697,ari.4556,adns.4557,areq.4579,avb.4635,arc.4637,ad_i.1681,ad_a_bid_s.1717,ad_a_bid_f.1717,ad_bd.1731,ad_bl.2435,ad_bs.2441,pbs.4922,nd.4945,jset.6668,lps.5571,srt.3,nreqs.3,nress.3,nrese.3,wffs.1133,wffe.1360,rsf_sj.170,rse_sj.331,rsf_pc.171,rse_pc.834,rsf_dpj.1796,rse_dpj.3414,nw.5949,pdl.5950,pda.6175,bcp.6185,plev.6321,cpt.6327,vfp.7096,vc.7454,aa.14051,aft.4922,ps.14052]\"",
+        "edges": [
+            {
+                "source": "nsHttp HttpChannelParent",
+                "dest": "a2dc7f0",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:17.992000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.399000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=e35c7c0 uri=https://www.google.com/complete/search?q&cp=0&client=psy-ab&xssi=t&gs_ri=gws-wiz&hl=en&authuser=0&psi=nwvdW7PCNpaQjgTJ150Q.1541213088387]\"",
+        "edges": [
+            {
+                "source": "ID-4",
+                "dest": "ID-3",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:48.399000"
+            },
+            {
+                "source": "ID-4",
+                "dest": "ID-5",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:44:48.399000"
+            },
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.399000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:05.675000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2dd5b0 uri=https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/annotations_module.js]\"",
+        "edges": [
+            {
+                "source": "annotations_module.js",
+                "dest": "nsHttp",
+                "Action": "hosted",
+                "timestamp": "..."
+            },
+            {
+                "source": "a2dd5b0",
+                "dest": "www.youtube.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:05.675000"
+            },
+            {
+                "source": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/annotations_module.js",
+                "dest": "www.youtube.com",
+                "Action": "received",
+                "timestamp": "..."
+            },
+            {
+                "source": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/annotations_module.js",
+                "dest": "www.youtube.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:05.675000"
+            },
+            {
+                "source": "nsHttp",
+                "dest": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/annotations_module.js",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:05.675000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "annotations_module.js",
+                "Action": "hosted",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:07.796000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=16c74800 uri=http://ocsp.pki.goog/GTSGIAG3]\"",
+        "edges": [
+            {
+                "source": "Main Thread",
+                "dest": "http://ocsp.pki.goog/GTSGIAG3",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:07.796000"
+            },
+            {
+                "source": "Main Thread",
+                "dest": "ocsp.pki.goog",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:07.796000"
+            },
+            {
+                "source": "GTSGIAG3",
+                "dest": "Main Thread",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:45:07.796000"
+            },
+            {
+                "source": "http://ocsp.pki.goog/GTSGIAG3",
+                "dest": "ocsp.pki.goog",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:07.796000"
+            },
+            {
+                "source": "ocsp.pki.goog",
+                "dest": "GTSGIAG3",
+                "Action": "hosts",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:49.054000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=15a42000 uri=https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=webhp&t=all&imn=4&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.611,dcl.384,iml.611,ol.1639,prt.365,xjs.1078,xjsee.1078,xjses.913,xjsls.383,wsrt.465,cst.0,dnst.5,rqst.230,rspt.95,rqstt.278,unt.199,cstt.205,dit.840&zx=1541213088992]\"",
+        "edges": [
+            {
+                "source": "https://www.google.com/gen_204?atyp=csi&ei=nwvdW7PCNpaQjgTJ150Q&s=webhp&t=all&imn=4&adh=&ima=2&ime=2&imeb=0&imeo=0&sys=hc.4&rt=aft.611,dcl.384,iml.611,ol.1639,prt.365,xjs.1078,xjsee.1078,xjses.913,xjsls.383,wsrt.465,cst.0,dnst.5,rqst.230,rspt.95,rqstt.278,unt.199,cstt.205,dit.840&zx=1541213088992",
+                "dest": "www.google.com",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:49.054000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:05.676000 UTC - [Main Thread]: V/nsHttp HttpChannelParent RecvAsyncOpen [this=a2ddf50 uri=https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/miniplayer.js]\"",
+        "edges": [
+            {
+                "source": "nsHttp",
+                "dest": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/miniplayer.js",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:05.676000"
+            },
+            {
+                "source": "https://www.youtube.com/yts/jsbin/player_remote_ux-vflJ5l1_K/en_GB/miniplayer.js",
+                "dest": "www.youtube.com",
+                "Action": "RecvAsyncOpen",
+                "timestamp": "2018-11-03 02:45:05.676000"
+            },
+            {
+                "source": "miniplayer.js",
+                "dest": "nsHttp",
+                "Action": "hosts",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:51.862000 UTC - [Main Thread]: D/nsHttp MaybeInvalidateCacheEntryForSubsequentGet [this=17808800 uri=http://ocsp.pki.goog/GTSGIAG3]\"",
+        "edges": [
+            {
+                "source": "ID-1",
+                "dest": "ID-2",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.862000"
+            },
+            {
+                "source": "ID-1",
+                "dest": "ID-3",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:51.862000"
+            },
+            {
+                "source": "ID-4",
+                "dest": "ID-1",
+                "Action": "MaybeInvalidateCacheEntryForSubsequentGet",
+                "timestamp": "2018-11-03 02:44:51.862000"
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:45:04.107000 UTC - [Main Thread]: V/nsHttp uri=https://www.youtube.com/yts/jsbin/scheduler-vflZDBPYi/scheduler.js\"",
+        "edges": [
+            {
+                "source": "www.youtube.com",
+                "dest": "scheduler.js",
+                "Action": "hosted",
+                "timestamp": "2018-11-03 02:45:04.107000"
+            },
+            {
+                "source": "https://www.youtube.com/yts/jsbin/scheduler-vflZDBPYi/scheduler.js",
+                "dest": "scheduler.js",
+                "Action": "accessed",
+                "timestamp": "2018-11-03 02:45:04.107000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "scheduler.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:04.107000"
+            },
+            {
+                "source": "https://www.youtube.com/yts/jsbin/scheduler-vflZDBPYi/scheduler.js",
+                "dest": "scheduler.js",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:45:04.107000"
+            },
+            {
+                "source": "www.youtube.com",
+                "dest": "scheduler.js",
+                "Action": "hosted",
+                "timestamp": "..."
+            }
+        ]
+    },
+    {
+        "input": "\"2018-11-03 02:44:48.449000 UTC - [Main Thread]: D/nsHttp uri=https://clients5.google.com/pagead/drt/dn/\"",
+        "edges": [
+            {
+                "source": "https://clients5.google.com/pagead/drt/dn/",
+                "dest": "pagead/drt/dn/",
+                "Action": "uri",
+                "timestamp": "2018-11-03 02:44:48.449000"
+            }
+        ]
+    }
+]
