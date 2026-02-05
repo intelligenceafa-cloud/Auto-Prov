@@ -1,0 +1,43 @@
+name: magic
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python version
+  - python=3.11.7
+  
+  # Core scientific packages (from conda)
+  - numpy>=1.21.0
+  - pandas
+  - scikit-learn>=1.2.2
+  - matplotlib>=3.5.0
+  - networkx>=2.8
+  - tqdm>=4.64.0
+  
+  # Utilities
+  - pytz>=2022.1
+  - pyyaml
+  - pip
+  
+  # Install CUDA-specific packages via pip (tested and working)
+  - pip:
+      # PyTorch 2.2.1 with CUDA 12.1
+      - torch==2.2.1 --index-url https://download.pytorch.org/whl/cu121
+      - torchvision --index-url https://download.pytorch.org/whl/cu121
+      - torchaudio --index-url https://download.pytorch.org/whl/cu121
+      - torchdata==0.7.1
+      # DGL for torch-2.2 with CUDA 12.1
+      - dgl -f https://data.dgl.ai/wheels/torch-2.2/cu121/repo.html
+      # Additional utilities
+      - pydantic
+
+# Usage:
+#   conda env create -f environment.yml
+#   conda activate magic
+#
+# Or update existing environment:
+#   conda env update -f environment.yml --prune
+#
+# Remove environment:
+#   conda remove -n magic --all
+

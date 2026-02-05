@@ -1,0 +1,38 @@
+# MAGIC Requirements
+# Based on original MAGIC (USENIX Security 2024)
+# For DARPA TC datasets (THEIA, FiveDirections)
+# Compatible with Python 3.11.7 and CUDA 12.1
+
+# Installation: pip install -r requirements.txt
+
+# PyTorch with CUDA 12.1 support (tested and working)
+--index-url https://download.pytorch.org/whl/cu121
+torch==2.2.1
+torchvision
+torchaudio
+torchdata==0.7.1
+
+# DGL with CUDA 12.1 support (for torch-2.2)
+--find-links https://data.dgl.ai/wheels/torch-2.2/cu121/repo.html
+dgl
+
+# Graph Libraries
+networkx>=2.8
+
+# Scientific Computing
+numpy>=1.21.0
+pandas
+scikit-learn>=1.2.2
+
+# Utilities
+tqdm>=4.64.0
+pytz>=2022.1
+pyyaml
+pydantic
+
+# Visualization
+matplotlib>=3.5.0
+
+# Note: Original MAGIC used torch==1.12.1 and dgl==1.0.0
+# Updated versions maintain backward compatibility for model architecture
+
