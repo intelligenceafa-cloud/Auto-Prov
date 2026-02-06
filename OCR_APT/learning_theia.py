@@ -1,28 +1,384 @@
-#!/usr/bin/env python3
-
 import os
 import sys
 import argparse
 import pickle
 import json
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
 from tqdm import tqdm
-
-from graph_learning import (
-    build_detector,
-    create_base_config,
-    get_model_file_name,
-    get_mapping_file_name,
-    detect_per_vtype_files,
-    load_vtype_data,
-    split_data_by_vtype,
-    prepare_pyg_data,
-    get_unique_vtypes,
-    train_model_simple
-)
+from torch_geometric.data import Data
+from torch_geometric.nn import RGCNConv
+try:
+    from pygod.detector import CoLA as PyGODCoLA, GAE as PyGODGAE
+    PYGOD_AVAILABLE = True
+except ImportError:
+    PYGOD_AVAILABLE = False
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+
+class OCRGCNBase(nn.Module):
+    def __init__(self, in_dim, hid_dim, num_relations, num_layers=3, dropout=0.0):
+        super(OCRGCNBase, self).__init__()
+        self.in_dim = in_dim
+        self.hid_dim = hid_dim
+        self.num_relations = num_relations
+        self.num_layers = num_layers
+        self.dropout = dropout
+        self.convs = nn.ModuleList()
+        self.convs.append(RGCNConv(in_dim, hid_dim, num_relations))
+        for _ in range(num_layers - 2):
+            self.convs.append(RGCNConv(hid_dim, hid_dim, num_relations))
+        self.convs.append(RGCNConv(hid_dim, hid_dim, num_relations))
+        self.c = None
+    
+    def forward(self, x, edge_index, edge_type):
+        for i, conv in enumerate(self.convs):
+            x = conv(x, edge_index, edge_type)
+            if i < len(self.convs) - 1:
+                x = F.relu(x)
+                x = F.dropout(x, p=self.dropout, training=self.training)
+        return x
+    
+    def init_center_c(self, data, edge_index, edge_type, eps=0.1):
+        self.eval()
+        with torch.no_grad():
+            z = self.forward(data, edge_index, edge_type)
+            c = z.mean(dim=0)
+            c[(abs(c) < eps) & (c < 0)] = -eps
+            c[(abs(c) < eps) & (c >= 0)] = eps
+        self.c = c
+        return c
+
+class OCRGCN:
+    def __init__(self, in_dim, hid_dim=32, num_relations=10, num_layers=3, dropout=0.0,
+                 lr=0.005, epoch=100, beta=0.5, contamination=0.001, warmup=10, eps=0.1, device='cuda'):
+        self.in_dim = in_dim
+        self.hid_dim = hid_dim
+        self.num_relations = num_relations
+        self.num_layers = num_layers
+        self.dropout = dropout
+        self.lr = lr
+        self.epoch = epoch
+        self.beta = beta
+        self.contamination = contamination
+        self.warmup = warmup
+        self.eps = eps
+        self.device = device if torch.cuda.is_available() else 'cpu'
+        self.config = {
+            'hid_dim': hid_dim, 'num_layers': num_layers, 'dropout': dropout,
+            'lr': lr, 'epoch': epoch, 'beta': beta, 'contamination': contamination,
+            'warmup': warmup, 'eps': eps
+        }
+        self.model = OCRGCNBase(in_dim, hid_dim, num_relations, num_layers, dropout).to(self.device)
+        self.optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)
+        self.radius = None
+    
+    def fit(self, data, edge_index, edge_type, target_mask=None, val_data=None):
+        data = data.to(self.device)
+        edge_index = edge_index.to(self.device)
+        edge_type = edge_type.to(self.device)
+        if target_mask is not None:
+            target_mask = target_mask.to(self.device)
+        self.model.init_center_c(data, edge_index, edge_type, eps=self.eps)
+        c = self.model.c
+        pbar = tqdm(range(1, self.epoch + 1), desc="Training OCRGCN", leave=False)
+        for ep in pbar:
+            self.model.train()
+            self.optimizer.zero_grad()
+            z = self.model(data, edge_index, edge_type)
+            dist = torch.sum((z - c) ** 2, dim=1)
+            if target_mask is not None:
+                dist = dist[target_mask]
+            if ep <= self.warmup:
+                loss = torch.mean(dist)
+            else:
+                if self.radius is None:
+                    with torch.no_grad():
+                        sorted_dist, _ = torch.sort(dist)
+                        quantile_idx = int((1 - self.contamination) * len(sorted_dist))
+                        self.radius = sorted_dist[quantile_idx]
+                scores = dist - self.radius ** 2
+                loss_dist = self.radius ** 2 + (1 / self.contamination) * torch.mean(F.relu(scores))
+                radius_loss = self.beta * torch.abs(self.radius)
+                loss = loss_dist + radius_loss
+            loss.backward()
+            self.optimizer.step()
+            phase = "warmup" if ep <= self.warmup else "training"
+            pbar.set_postfix({'loss': f'{loss.item():.4f}', 'phase': phase})
+        pbar.close()
+    
+    def predict(self, data, edge_index, edge_type, target_mask=None):
+        self.model.eval()
+        data = data.to(self.device)
+        edge_index = edge_index.to(self.device)
+        edge_type = edge_type.to(self.device)
+        if target_mask is not None:
+            target_mask = target_mask.to(self.device)
+        with torch.no_grad():
+            z = self.model(data, edge_index, edge_type)
+            c = self.model.c
+            dist = torch.sum((z - c) ** 2, dim=1)
+            scores = dist.cpu().numpy()
+        return scores
+    
+    def save_model(self, path):
+        torch.save({
+            'model_state_dict': self.model.state_dict(),
+            'center': self.model.c,
+            'radius': self.radius,
+            'model_name': 'ocrgcn',
+            'config': self.config,
+            'hyperparameters': {
+                'in_dim': self.in_dim, 'hid_dim': self.hid_dim, 'num_relations': self.num_relations,
+                'num_layers': self.num_layers, 'dropout': self.dropout, 'contamination': self.contamination
+            }
+        }, path)
+    
+    def load_model(self, path):
+        checkpoint = torch.load(path, map_location=self.device)
+        self.model.load_state_dict(checkpoint['model_state_dict'])
+        self.model.c = checkpoint['center']
+        self.radius = checkpoint['radius']
+        if 'config' in checkpoint:
+            self.config = checkpoint['config']
+
+class CoLAWrapper:
+    def __init__(self, in_dim, hid_dim=64, num_layers=2, dropout=0.0, lr=0.005, epoch=100, contamination=0.001, device='cuda'):
+        if not PYGOD_AVAILABLE:
+            raise ImportError("PyGOD is required for CoLA wrapper")
+        self.device = device if torch.cuda.is_available() else 'cpu'
+        self.config = {'in_dim': in_dim, 'hid_dim': hid_dim, 'num_layers': num_layers, 'dropout': dropout, 'lr': lr, 'epoch': epoch, 'contamination': contamination}
+        self.contamination = contamination
+        self.model = PyGODCoLA(hid_dim=hid_dim, num_layers=num_layers, dropout=dropout, lr=lr, epoch=epoch, contamination=contamination)
+        self.model.device = self.device
+    
+    def _build_data(self, x, edge_index):
+        return Data(x=x.to(self.device), edge_index=edge_index.to(self.device))
+    
+    def fit(self, data, edge_index, edge_type, target_mask=None, val_data=None):
+        graph = self._build_data(data, edge_index)
+        self.model.fit(graph)
+    
+    def predict(self, data, edge_index, edge_type, target_mask=None):
+        graph = self._build_data(data, edge_index)
+        scores = self.model.decision_function(graph)
+        if isinstance(scores, torch.Tensor):
+            scores = scores.cpu().numpy()
+        return scores
+    
+    def save_model(self, path):
+        torch.save({'config': self.config, 'model_name': 'cola', 'model_obj': self.model}, path)
+    
+    def load_model(self, path):
+        checkpoint = torch.load(path, map_location=self.device)
+        self.config = checkpoint.get('config', self.config)
+        self.contamination = self.config.get('contamination', self.contamination)
+        self.model = checkpoint.get('model_obj', self.model)
+        self.model.device = self.device
+
+class GAEWrapper:
+    def __init__(self, in_dim, hid_dim=64, num_layers=2, dropout=0.0, lr=0.005, epoch=100, contamination=0.001, device='cuda'):
+        if not PYGOD_AVAILABLE:
+            raise ImportError("PyGOD is required for GAE wrapper")
+        self.device = device if torch.cuda.is_available() else 'cpu'
+        self.config = {'in_dim': in_dim, 'hid_dim': hid_dim, 'num_layers': num_layers, 'dropout': dropout, 'lr': lr, 'epoch': epoch, 'contamination': contamination}
+        self.contamination = contamination
+        self.model = PyGODGAE(hid_dim=hid_dim, num_layers=num_layers, lr=lr, epoch=epoch, contamination=contamination)
+        self.model.device = self.device
+    
+    def _build_data(self, x, edge_index):
+        return Data(x=x.to(self.device), edge_index=edge_index.to(self.device))
+    
+    def fit(self, data, edge_index, edge_type, target_mask=None, val_data=None):
+        graph = self._build_data(data, edge_index)
+        self.model.fit(graph)
+    
+    def predict(self, data, edge_index, edge_type, target_mask=None):
+        graph = self._build_data(data, edge_index)
+        scores = self.model.decision_function(graph)
+        if isinstance(scores, torch.Tensor):
+            scores = scores.cpu().numpy()
+        return scores
+    
+    def save_model(self, path):
+        torch.save({'config': self.config, 'model_name': 'gae', 'model_obj': self.model}, path)
+    
+    def load_model(self, path):
+        checkpoint = torch.load(path, map_location=self.device)
+        self.config = checkpoint.get('config', self.config)
+        self.contamination = self.config.get('contamination', self.contamination)
+        self.model = checkpoint.get('model_obj', self.model)
+        if hasattr(self.model, 'device'):
+            self.model.device = self.device
+
+def build_detector(model_name, config, in_dim, num_relations, device):
+    model_name = model_name.lower()
+    if model_name == 'ocrgcn':
+        return OCRGCN(in_dim=in_dim, hid_dim=config['hid_dim'], num_relations=num_relations,
+                     num_layers=config['num_layers'], dropout=config['dropout'], lr=config['lr'],
+                     epoch=config['epoch'], beta=config.get('beta', 0.5), contamination=config['contamination'],
+                     warmup=config.get('warmup', 2), eps=config.get('eps', 0.1), device=device)
+    if model_name == 'cola':
+        return CoLAWrapper(in_dim=in_dim, hid_dim=config['hid_dim'], num_layers=config['num_layers'],
+                          dropout=config['dropout'], lr=config['lr'], epoch=config['epoch'],
+                          contamination=config['contamination'], device=device)
+    if model_name == 'gae':
+        return GAEWrapper(in_dim=in_dim, hid_dim=config['hid_dim'], num_layers=config['num_layers'],
+                         dropout=config['dropout'], lr=config['lr'], epoch=config['epoch'],
+                         contamination=config['contamination'], device=device)
+    raise ValueError(f"Unsupported model: {model_name}")
+
+def create_base_config(args):
+    is_original_mode = not (hasattr(args, 'rulellm') and (args.rulellm or (hasattr(args, 'llmlabel') and args.llmlabel) or (hasattr(args, 'llmfunc') and args.llmfunc)))
+    warmup = args.warmup if hasattr(args, 'warmup') and args.warmup is not None else (2 if is_original_mode else 10)
+    return {
+        'hid_dim': args.hid_dim, 'num_layers': args.num_layers, 'dropout': args.dropout,
+        'lr': args.lr, 'epoch': args.epoch, 'beta': args.beta, 'contamination': args.contamination,
+        'warmup': warmup, 'eps': args.eps
+    }
+
+def get_model_file_name(model_name, suffix):
+    base = 'ocrgcn' if model_name.lower() == 'ocrgcn' else model_name.lower()
+    return f'{base}_model{suffix}.pth'
+
+def get_mapping_file_name(model_name, suffix):
+    if model_name.lower() == 'ocrgcn':
+        return f'mappings{suffix}.pkl'
+    return f'mappings{suffix}_{model_name.lower()}.pkl'
+
+def detect_per_vtype_files(base_dir):
+    vtypes_list_file = os.path.join(base_dir, 'vtypes_list.pkl')
+    if os.path.exists(vtypes_list_file):
+        with open(vtypes_list_file, 'rb') as f:
+            vtype_info = pickle.load(f)
+        return vtype_info['vtypes'], vtype_info['vtype_counts']
+    if os.path.exists(os.path.join(base_dir, 'train_data.pkl')):
+        return None, None
+    print(f"⚠️ No data files found in {base_dir}")
+    return None, None
+
+def load_vtype_data(base_dir, vtype):
+    vtype_safe = vtype.replace('/', '_').replace('+', '_')
+    train_file = os.path.join(base_dir, f'train_data_{vtype_safe}.pkl')
+    features_file = os.path.join(base_dir, f'features_train_{vtype_safe}.pkl')
+    edge_types_file = os.path.join(base_dir, 'edge_types.pkl')
+    with open(train_file, 'rb') as f:
+        train_data = pickle.load(f)
+    with open(features_file, 'rb') as f:
+        features_train = pickle.load(f)
+    with open(edge_types_file, 'rb') as f:
+        edge_types = pickle.load(f)
+    return train_data, features_train, edge_types
+
+def split_data_by_vtype(graph_data, features_df, edge_types, target_vtype):
+    nodes = graph_data['nodes']
+    edges = graph_data['edges']
+    target_vtype_nodes = {nid: ninfo for nid, ninfo in nodes.items() if ninfo.get('type') == target_vtype}
+    target_node_ids = set(target_vtype_nodes.keys())
+    vtype_graph_data = {
+        'nodes': nodes, 'edges': edges, 'graph': None,
+        'target_vtype': target_vtype, 'target_node_ids': target_node_ids,
+    }
+    return vtype_graph_data, features_df, len(target_vtype_nodes)
+
+def prepare_pyg_data(graph_data, features_df, edge_types):
+    nodes = graph_data['nodes']
+    edges = graph_data['edges']
+    target_node_ids = graph_data.get('target_node_ids', None)
+    node_ids = sorted(list(nodes.keys()))
+    node_id_to_idx = {nid: idx for idx, nid in enumerate(node_ids)}
+    edge_type_mapping = {etype: idx for idx, etype in enumerate(sorted(edge_types))}
+    features_df = features_df.set_index('node_uuid')
+    features_df = features_df.reindex(node_ids, fill_value=0)
+    x = torch.FloatTensor(features_df.values)
+    edge_list = []
+    edge_type_list = []
+    for src, dst, etype, timestamp in tqdm(edges, desc="Processing edges", leave=False):
+        if src in node_id_to_idx and dst in node_id_to_idx:
+            edge_list.append([node_id_to_idx[src], node_id_to_idx[dst]])
+            edge_type_list.append(edge_type_mapping.get(etype, 0))
+    if len(edge_list) > 0:
+        edge_index = torch.LongTensor(edge_list).t()
+        edge_type_tensor = torch.LongTensor(edge_type_list)
+        reverse_edge_index = torch.stack([edge_index[1], edge_index[0]], dim=0)
+        edge_index_undirected = torch.cat([edge_index, reverse_edge_index], dim=1)
+        edge_type_undirected = torch.cat([edge_type_tensor, edge_type_tensor], dim=0)
+    else:
+        edge_index_undirected = torch.LongTensor(2, 0)
+        edge_type_undirected = torch.LongTensor([])
+    data = Data(x=x, edge_index=edge_index_undirected, edge_type=edge_type_undirected)
+    if target_node_ids is not None:
+        target_mask = torch.zeros(len(node_ids), dtype=torch.bool)
+        for i, nid in enumerate(node_ids):
+            if nid in target_node_ids:
+                target_mask[i] = True
+        data.target_mask = target_mask
+    return data, edge_type_mapping, node_id_to_idx
+
+def get_unique_vtypes(graph_data):
+    nodes = graph_data['nodes']
+    vtype_counts = {}
+    for node_info in nodes.values():
+        vtype = node_info.get('type', 'unknown')
+        vtype_counts[vtype] = vtype_counts.get(vtype, 0) + 1
+    vtypes = sorted(vtype_counts.keys(), key=lambda x: vtype_counts[x], reverse=True)
+    return vtypes, vtype_counts
+
+def train_model_simple(model_name, config, data, edge_index, edge_type, epochs, model_dir, device, num_relations, target_mask=None):
+    model_label = os.path.basename(model_dir)
+    model_name = model_name.lower()
+    in_dim = data.shape[1]
+    if model_name == 'ocrgcn':
+        detector = build_detector(model_name, config, in_dim, num_relations, device)
+        pbar = tqdm(range(1, epochs + 1), desc=f"Training {model_label}")
+        data_device = data.to(device)
+        edge_index_device = edge_index.to(device)
+        edge_type_device = edge_type.to(device)
+        target_mask_device = target_mask.to(device) if target_mask is not None else None
+        detector.model.init_center_c(data_device, edge_index_device, edge_type_device, eps=detector.eps)
+        c = detector.model.c
+        for ep in pbar:
+            detector.model.train()
+            detector.optimizer.zero_grad()
+            z = detector.model(data_device, edge_index_device, edge_type_device)
+            dist = torch.sum((z - c) ** 2, dim=1)
+            if target_mask_device is not None:
+                dist = dist[target_mask_device]
+            if ep <= detector.warmup:
+                loss = torch.mean(dist)
+            else:
+                if detector.radius is None:
+                    with torch.no_grad():
+                        sorted_dist, _ = torch.sort(dist)
+                        quantile_idx = int((1 - detector.contamination) * len(sorted_dist))
+                        detector.radius = sorted_dist[quantile_idx]
+                scores = dist - detector.radius ** 2
+                loss_dist = detector.radius ** 2 + (1 / detector.contamination) * torch.mean(F.relu(scores))
+                radius_loss = detector.beta * torch.abs(detector.radius)
+                loss = loss_dist + radius_loss
+            loss.backward()
+            detector.optimizer.step()
+            pbar.set_postfix({'loss': f'{loss.item():.4f}'})
+            checkpoint_path = os.path.join(model_dir, f'checkpoint_epoch_{ep}.pth')
+            detector.save_model(checkpoint_path)
+        pbar.close()
+        return detector
+    progress_desc = f"Training {model_label} ({model_name})"
+    pbar = tqdm(range(1, epochs + 1), desc=progress_desc)
+    last_detector = None
+    for ep in pbar:
+        config_epoch = config.copy()
+        config_epoch['epoch'] = ep
+        detector = build_detector(model_name, config_epoch, in_dim, num_relations, device)
+        detector.fit(data, edge_index, edge_type, target_mask=target_mask)
+        checkpoint_path = os.path.join(model_dir, f'checkpoint_epoch_{ep}.pth')
+        detector.save_model(checkpoint_path)
+        last_detector = detector
+        torch.cuda.empty_cache()
+    pbar.close()
+    return last_detector
 
 def train_model_8(base_dir, hypersearch_root, train_data, features_train, edge_types, 
                   vtypes_from_files=None, vtype_counts_from_files=None, 
