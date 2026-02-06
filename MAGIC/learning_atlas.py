@@ -1,9 +1,19 @@
 #!/usr/bin/env python3
 
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
-
+import sys
 import argparse
+
+def parse_args_early():
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("--gpus", type=str, default="", help="Comma-separated GPU ids (e.g. 0,1,2); default empty = use all available")
+    args, _ = parser.parse_known_args()
+    return args.gpus
+
+gpus = parse_args_early()
+if gpus and gpus.strip():
+    os.environ["CUDA_VISIBLE_DEVICES"] = gpus
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 import torch
 import torch.nn as nn
 import pickle

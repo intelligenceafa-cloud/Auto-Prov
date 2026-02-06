@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
 
 import os
-if 'CUDA_VISIBLE_DEVICES' not in os.environ:
-    os.environ["CUDA_VISIBLE_DEVICES"] = "2"
-os.environ["WANDB_DISABLED"] = "true"
+import sys
+import argparse
+
+def parse_args_early():
+    parser = argparse.ArgumentParser(add_help=False)
+    parser.add_argument("--gpus", type=str, default="", help="Comma-separated GPU ids (e.g. 0,1,2); default empty = use all available")
+    args, _ = parser.parse_known_args()
+    return args.gpus
+
+gpus = parse_args_early()
+if gpus and gpus.strip():
+    os.environ["CUDA_VISIBLE_DEVICES"] = gpus
 
 import json
 import pickle
 import glob
 import re
-import argparse
 import numpy as np
 from tqdm import tqdm
 import networkx as nx
