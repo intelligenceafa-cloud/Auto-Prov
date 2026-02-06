@@ -1,4 +1,4 @@
-# AutoProv: KAIROS / MAGIC / OCR_APT / FLASH run guide (concise)
+# AutoProv: KAIROS / MAGIC / OCR_APT / FLASH run guide
 
 This README gives the minimum steps to run `eval_{dataset}.py` and the end-to-end graph generation → training → inference for:
 - `AutoProv/KAIROS`
