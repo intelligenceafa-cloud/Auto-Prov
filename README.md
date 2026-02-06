@@ -1,9 +1,10 @@
-# AutoProv: KAIROS / MAGIC / OCR_APT run guide (concise)
+# AutoProv: KAIROS / MAGIC / OCR_APT / FLASH run guide (concise)
 
 This README gives the minimum steps to run `eval_{dataset}.py` and the end-to-end graph generation → training → inference for:
 - `AutoProv/KAIROS`
 - `AutoProv/MAGIC`
 - `AutoProv/OCR_APT`
+- `AutoProv/FLASH`
 
 All paths below assume datasets and features live under `AutoProv/BIGDATA`. Override with CLI flags if your paths differ.
 
@@ -347,9 +348,49 @@ python AutoProv/OCR_APT/learning_theia.py --autoprov --embedding mpnet --epochs 
 python AutoProv/OCR_APT/eval_theia.py
 ```
 
-## 5) Artifacts output locations (defaults)
+## 5) FLASH
+
+### Eval script
+```
+python AutoProv/FLASH/eval_theia.py
+```
+
+**Default behavior:**
+- Evaluates both baseline and AutoProv models
+- Uses default paths: `AutoProv/BIGDATA/FLASH_artifacts/`
+- AutoProv defaults: `embedding=word2vec`, model 36 at epoch 50
+
+### End-to-end: THEIA
+```
+# Step 1-2: Generate and apply rules (see KAIROS THEIA steps above)
+# Then proceed with graph generation:
+
+# Graph generation (baseline)
+python AutoProv/FLASH/graph_gen_theia.py --baseline \
+  --dataset_path AutoProv/BIGDATA/DARPA-E3/
+
+# Graph generation (autoprov)
+python AutoProv/FLASH/graph_gen_theia.py --autoprov
+# AutoProv mode uses default path: AutoProv/BIGDATA/ExtractedProvGraph/
+
+# Training
+python AutoProv/FLASH/learning_theia.py --baseline --epochs 20
+python AutoProv/FLASH/learning_theia.py --autoprov --embedding word2vec
+# Supported embeddings: word2vec, mpnet, minilm, roberta, distilbert, fasttext
+
+# Evaluation
+python AutoProv/FLASH/eval_theia.py
+```
+
+This evaluates both baseline and AutoProv models and displays results tables with:
+- AUC-ROC
+- AUC-PR
+- ADP (Attack Detection Precision)
+
+## 6) Artifacts output locations (defaults)
 - KAIROS: `AutoProv/BIGDATA/KAIROS_artifacts/` (THEIA/FIVEDIRECTIONS);  
   ATLAS graph gen outputs to `AutoProv/KAIROS/ATLAS_artifacts/` unless redirected.
 - MAGIC: `AutoProv/BIGDATA/MAGIC_artifacts/`
 - OCR_APT: `AutoProv/BIGDATA/OCR_APT_artifacts/`
+- FLASH: `AutoProv/BIGDATA/FLASH_artifacts/`
 
