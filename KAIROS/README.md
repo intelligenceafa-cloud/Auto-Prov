@@ -1,6 +1,5 @@
 # KAIROS
 
-This guide explains how to run the KAIROS pipeline on ATLAS for **baseline** (original ATLAS graphs) and **AutoProv** (RuleLLM graphs with LLM embeddings). The pipeline uses temporal graph neural networks (TGN) for link prediction and evaluates at log level with AUC-ROC, AUC-PR, and ADP.
 
 1. [Displaying Results](#displaying-results)
 2. [End-to-End Pipeline](#end-to-end-pipeline)
@@ -37,12 +36,6 @@ python eval_atlas.py --artifacts_root /path/to/ATLAS_artifacts
 # Override baseline or autoprov directory
 python eval_atlas.py --baseline_dir /path/to/original_atlas_graph --autoprov_dir /path/to/rulellm_artifacts
 
-# Skip one of the evaluations
-python eval_atlas.py --skip_baseline
-python eval_atlas.py --skip_autoprov
-
-# Set GPU
-python eval_atlas.py --cuda_visible_devices 0
 ```
 
 ---
