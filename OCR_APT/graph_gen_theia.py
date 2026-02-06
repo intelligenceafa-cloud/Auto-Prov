@@ -50,8 +50,8 @@ def parse_args():
     parser.add_argument('--pca_dim', type=int, default=128,
                        help='PCA dimensionality for embeddings (default: 128)')
     
-    parser.add_argument('--gpu', type=str, default='2',
-                       help='GPU device ID (default: 2)')
+    parser.add_argument('--gpus', type=str, default='',
+                       help='Comma-separated GPU ids (e.g. 0,1,2); default empty = use all available')
     
     return parser.parse_args()
 
@@ -881,7 +881,8 @@ def is_dir_in_date_range(dir_path, start_date, end_date):
 def main():
     args = parse_args()
     
-    os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
+    if args.gpus and args.gpus.strip():
+        os.environ["CUDA_VISIBLE_DEVICES"] = args.gpus
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
     autoprov_dir = os.path.dirname(script_dir)
