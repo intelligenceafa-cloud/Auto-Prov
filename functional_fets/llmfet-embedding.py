@@ -1,9 +1,19 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+import sys
+import argparse as argparse_early
+
+def parse_args_early():
+    parser = argparse_early.ArgumentParser(add_help=False)
+    parser.add_argument("--gpus", type=str, default="", help="Comma-separated GPU ids (e.g. 0,1,2); default empty = use all available")
+    args, _ = parser.parse_known_args()
+    return args.gpus
+
+gpus = parse_args_early()
+if gpus and gpus.strip():
+    os.environ["CUDA_VISIBLE_DEVICES"] = gpus
 
 import json
 import pickle
-import argparse
 import numpy as np
 from pathlib import Path
 from tqdm import tqdm
@@ -47,7 +57,7 @@ class TextEmbedder:
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Generate embeddings for LLM-extracted file type features (ATLAS version)")
+    parser = argparse_early.ArgumentParser(description="Generate embeddings for LLM-extracted file type features (ATLAS version)")
     parser.add_argument("--dataset", type=str, required=True, 
                         choices=["theia", "fivedirections", "atlas"],
                         help="Dataset name")

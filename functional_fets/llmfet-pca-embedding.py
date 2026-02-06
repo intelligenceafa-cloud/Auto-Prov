@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
 
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+import sys
+import argparse as argparse_early
+
+def parse_args_early():
+    parser = argparse_early.ArgumentParser(add_help=False)
+    parser.add_argument("--gpus", type=str, default="", help="Comma-separated GPU ids (e.g. 0,1,2); default empty = use all available")
+    args, _ = parser.parse_known_args()
+    return args.gpus
+
+gpus = parse_args_early()
+if gpus and gpus.strip():
+    os.environ["CUDA_VISIBLE_DEVICES"] = gpus
 
 import json
 import pickle
 import glob
-import argparse
 import numpy as np
 from tqdm import tqdm
 from datetime import datetime
@@ -23,7 +33,7 @@ from stepllm_utils.vtype_res import getvtypes
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(
+    parser = argparse_early.ArgumentParser(
         description="Pre-compute PCA-reduced LLM feature embeddings (matching MAGIC logic) - ATLAS version"
     )
     

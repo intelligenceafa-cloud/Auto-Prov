@@ -1,22 +1,33 @@
 #!/usr/bin/env python3
 
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,2"
+import sys
+import argparse as argparse_early
+
+def parse_args_early():
+    parser = argparse_early.ArgumentParser(add_help=False)
+    parser.add_argument("--gpus", type=str, default="", help="Comma-separated GPU ids (e.g. 0,1,2); default empty = use all available")
+    args, _ = parser.parse_known_args()
+    return args.gpus
+
+gpus = parse_args_early()
+if gpus and gpus.strip():
+    os.environ["CUDA_VISIBLE_DEVICES"] = gpus
+
 import json
 import re
 import requests
 from tqdm import tqdm
-import argparse
 import glob
 import pickle
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="File/Directory Classification using LLM")
+    parser = argparse_early.ArgumentParser(description="File/Directory Classification using LLM")
     parser.add_argument("--llm_name", type=str, default="llama3:70b", help="Select llm name for Ollama")
     parser.add_argument("--dataset_name", type=str, default="fivedirections", help="Select dataset name")
     parser.add_argument("--temperature", type=float, default=0.0, help="Specify temperature")
     parser.add_argument("--max_tokens", type=int, default=500, help="Specify max tokens")
-    parser.add_argument("--ollama_url", type=str, default="http://localhost:11434", help="URL for Ollama API")
+    parser.add_argument("--ollama_url", type=str, required=True, help="URL for Ollama API (required)")
     parser.add_argument("--do_sample", action="store_true", help="Enable sampling")
     
     return parser.parse_args()

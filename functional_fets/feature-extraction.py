@@ -1,5 +1,16 @@
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+import sys
+import argparse as argparse_early
+
+def parse_args_early():
+    parser = argparse_early.ArgumentParser(add_help=False)
+    parser.add_argument("--gpus", type=str, default="", help="Comma-separated GPU ids (e.g. 0,1,2); default empty = use all available")
+    args, _ = parser.parse_known_args()
+    return args.gpus
+
+gpus = parse_args_early()
+if gpus and gpus.strip():
+    os.environ["CUDA_VISIBLE_DEVICES"] = gpus
 
 import pickle
 import json
@@ -11,21 +22,19 @@ import yaml
 import requests
 
 from openai import OpenAI
-import argparse
-import os
 
 cache_dir = "./llm_cache"
 
 huggingface_token = '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'
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="KAIROS Graph creation")
+    parser = argparse_early.ArgumentParser(description="KAIROS Graph creation")
     parser.add_argument("--dataset", type=str, default="fivedirections", help="Select dataset")
     parser.add_argument("--os_type", type=str, default="windows", help="Select os type linux/windows")
     parser.add_argument("--llm_name", type=str, default="llama3:70b", help="Select llm name")
     parser.add_argument("--temperature", type=float, default=0.0, help="Specify temperature")
     parser.add_argument("--max_tokens", type=int, default=1000, help="Specify max tokens")
-    parser.add_argument("--ollama_url", type=str, default="http://localhost:11434", help="URL for Ollama API")
+    parser.add_argument("--ollama_url", type=str, default=None, help="URL for Ollama API (required when using Ollama models)")
 
     parser.add_argument("--do_sample", action="store_true", help="Enable sampling")
 
@@ -221,6 +230,8 @@ if __name__ == "__main__":
     llm_name = args.llm_name
     ollama_url = args.ollama_url
 
+    if llm_name != 'gpt-4o' and not ollama_url:
+        raise ValueError("--ollama_url is required when using Ollama models (not gpt-4o)")
 
     validity_results = load_validity_results(dataset, llm_name)
     if not validity_results:

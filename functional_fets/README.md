@@ -15,15 +15,20 @@ Extract LLM type/functionality features from entity names, build behavioral prof
 python file-processing.py --dataset atlas
 
 # 2) Classify each unique ename as VALID / INVALID / COMMAND-LINE (writes file_classification_results/{llm_name}/ename_validity_{dataset}.json)
-python file-check.py --dataset_name atlas --llm_name llama3:70b --ollama_url http://localhost:11434
+python file-check.py --dataset_name atlas --llm_name llama3:70b --ollama_url <your_ollama_url>
 
 # 3) For each valid ename, get Type + Functionality via LLM (writes llm-fets/{llm_name}/ename_fets_{dataset}.json)
-python feature-extraction.py --dataset atlas --llm_name llama3:70b --ollama_url http://localhost:11434
+# For Ollama models:
+python feature-extraction.py --dataset atlas --llm_name llama3:70b --ollama_url <your_ollama_url>
+# For OpenAI (gpt-4o), create config.yaml with OpenAI API key: token: "your-api-key"
+python feature-extraction.py --dataset atlas --llm_name gpt-4o
 ```
 
 - For step 2/3, use the same `--llm_name` (e.g. `llama3:70b`, `gpt-4o` for feature-extraction if using OpenAI).  
 - `feature-extraction.py` reads validity from `file_classification_results/{llm_name}/ename_validity_{dataset}.json`.  
 - Omit `--dataset` in step 1 to process every `enames_*.pkl` in the directory.
+- **Important:** `--ollama_url` is required for Ollama models. For OpenAI (gpt-4o), create `config.yaml` with `token: "your-api-key"`.
+- Use `--gpus` to specify GPU IDs (e.g., `--gpus 0,1,2`); omit to use all available GPUs.
 
 ---
 
