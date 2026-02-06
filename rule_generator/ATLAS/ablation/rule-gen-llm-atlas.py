@@ -43,8 +43,13 @@ class LLMRegexGenerator:
             import requests
             import os
             
-            self.ollama_url = kwargs.get('ollama_url', 'http://localhost:11434')
-            gpu_cards = kwargs.get('gpu_cards', '0')
+            self.ollama_url = kwargs.get('ollama_url')
+            if not self.ollama_url:
+                raise ValueError("ollama_url is required")
+            
+            gpu_cards = kwargs.get('gpu_cards')
+            if not gpu_cards:
+                gpu_cards = self._get_all_available_gpus()
             
             self._setup_gpu_environment(gpu_cards)
             
@@ -139,6 +144,22 @@ class LLMRegexGenerator:
             
         except Exception as e:
             raise
+    
+    def _get_all_available_gpus(self):
+        try:
+            import subprocess
+            
+            result = subprocess.run(['nvidia-smi', '--list-gpus'], 
+                                  capture_output=True, text=True, timeout=10)
+            
+            if result.returncode == 0:
+                available_gpus = len(result.stdout.strip().split('\n'))
+                if available_gpus > 0:
+                    gpu_list = ','.join(str(i) for i in range(available_gpus))
+                    return gpu_list
+            return None
+        except Exception:
+            return None
     
     def _validate_gpu_cards(self, gpu_cards):
         try:
@@ -2045,7 +2066,7 @@ def load_log_characteristics(log_characteristics_path: str = None, cee: str = No
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate regex patterns for CDM18 log processing using Ollama (Ablation version)")
+    parser = argparse.ArgumentParser(description="Generate regex")
     parser.add_argument("--cee", type=str, required=True,
                         help="Candidate Edge Extractor name (e.g., gpt-3.5-turbo, llama3:70b)")
     parser.add_argument("--model-name", default="llama3:70b", 
@@ -2053,9 +2074,9 @@ def main():
     parser.add_argument("--file-type", default="edges", choices=["edges", "enames", "vtypes"],
                         help="Type of data to process")
     parser.add_argument("--ollama-url", required=True,
-                        help="Ollama server URL")
-    parser.add_argument("--gpu-cards", default="0", 
-                        help="Comma-separated list of GPU card numbers to use (default: 0)")
+                        help="Ollama server URL (required)")
+    parser.add_argument("--gpu-cards", default=None, 
+                        help="Comma-separated list of GPU card numbers to use (default: all available GPUs)")
     parser.add_argument("--show-gpu-usage", action="store_true", 
                         help="Show detailed GPU usage information during processing")
     parser.add_argument("--auto-restart-ollama", action="store_true", default=True,
