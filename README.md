@@ -10,15 +10,12 @@ All paths below assume datasets and features live under `AutoProv/BIGDATA`. Over
 
 ## 1) Dataset and feature placement (required)
 
-### Raw logs (baseline mode: THEIA / FIVEDIRECTIONS)
+### Raw logs (baseline mode: THEIA)
 Used by KAIROS, MAGIC, OCR_APT baseline graph generation.
 
 ```
 AutoProv/BIGDATA/DARPA-E3/
   THEIA/
-    <timestamp_dir>/
-      logs.pkl            # or logs.pkl.zip
-  FIVEDIRECTIONS/
     <timestamp_dir>/
       logs.pkl            # or logs.pkl.zip
 ```
@@ -33,9 +30,6 @@ AutoProv/BIGDATA/ExtractedProvGraph/
   THEIA/
     <timestamp_dir>/
       *.csv   # one CSV per timestamp dir
-  FIVEDIRECTIONS/
-    <timestamp_dir>/
-      *.csv
 ```
 
 Each CSV must contain columns like: `source_id`, `dest_id`, `action`, `timestamp`,
@@ -46,7 +40,7 @@ Each CSV must contain columns like: `source_id`, `dest_id`, `action`, `timestamp
 PCA embeddings (preferred, required by OCR_APT AutoProv):
 ```
 AutoProv/BIGDATA/llmfets-pca-embedding/
-  theia|fivedirections/
+  theia/
     <embedding>/
       type_pca{pca_dim}_all.pkl
       type_pca{pca_dim}_model.pkl
@@ -57,7 +51,7 @@ AutoProv/BIGDATA/llmfets-pca-embedding/
 Raw embeddings (fallback):
 ```
 AutoProv/BIGDATA/llmfets-embedding/
-  theia|fivedirections/
+  theia/
     <embedding>/
       type_all.pkl
       functionality_all.pkl
@@ -95,7 +89,7 @@ python AutoProv/KAIROS/eval_theia.py --artifacts_dir AutoProv/BIGDATA/KAIROS_art
 python AutoProv/KAIROS/eval_atlas.py --artifacts_root AutoProv/BIGDATA/KAIROS_artifacts/ATLAS_artifacts
 ```
 
-### End-to-end: THEIA / FIVEDIRECTIONS
+### End-to-end: THEIA
 Rule generation → graph extraction → graph gen → train → inference
 ```
 # Step 1: Generate regex patterns (for RuleLLM mode)
@@ -376,7 +370,7 @@ python AutoProv/FLASH/graph_gen_theia.py --autoprov
 # Training
 python AutoProv/FLASH/learning_theia.py --baseline --epochs 20
 python AutoProv/FLASH/learning_theia.py --autoprov --embedding word2vec
-# Supported embeddings: word2vec, mpnet, minilm, roberta, distilbert, fasttext
+# Supported embeddings: word2vec, mpnet, roberta, distilbert, fasttext
 
 # Evaluation
 python AutoProv/FLASH/eval_theia.py
@@ -388,7 +382,7 @@ This evaluates both baseline and AutoProv models and displays results tables wit
 - ADP (Attack Detection Precision)
 
 ## 6) Artifacts output locations (defaults)
-- KAIROS: `AutoProv/BIGDATA/KAIROS_artifacts/` (THEIA/FIVEDIRECTIONS);  
+- KAIROS: `AutoProv/BIGDATA/KAIROS_artifacts/` (THEIA);  
   ATLAS graph gen outputs to `AutoProv/KAIROS/ATLAS_artifacts/` unless redirected.
 - MAGIC: `AutoProv/BIGDATA/MAGIC_artifacts/`
 - OCR_APT: `AutoProv/BIGDATA/OCR_APT_artifacts/`
